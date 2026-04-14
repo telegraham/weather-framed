@@ -8,23 +8,25 @@ function ForecastRenderer(config) {
 }
 ForecastRenderer.prototype.render = function() {
 
-    this.hoursElement
-
-
-
     for (var i = 0; i < this.hoursToRender; i++) {
 
-     var hourDiv = document.createElement('div');
-     hourDiv.className = "hour";
-     this.hoursElement.appendChild(hourDiv);
-
-     var hourData = this.data.hours[i];
-
-     hourDiv.innerText = hourData.hourNumber; //+ " " + hourData.weatherCondition.description.text;
-    //  // hourly += <
-    //  // Things[i]
-
+      this._renderHour(this.data.hours[i]);
+      this._renderTemp(this.data.hours[i]);
+      this._renderPrecip(this.data.hours[i]);
     }
 
+}
+ForecastRenderer.prototype._renderHour =  function(hourData){
+
+     var hourLi = document.createElement('li');
+     hourLi.className = "hour";
+     this.hoursElement.appendChild(hourLi);
+
+     hourLi.innerText = hourData.hourNumber;
+}
+ForecastRenderer.prototype._renderTemp = function(){
+
+}
+ForecastRenderer.prototype._renderPrecip = function(){
 
 }
