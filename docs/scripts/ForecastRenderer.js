@@ -14,18 +14,17 @@ ForecastRenderer.prototype.render = function() {
     var temperatures = hours.map(function(hourData) {
       return hourData.temperature;
     });
-    var lowTemperature = Math.min.apply(null, temperatures);
-    var highTemperature = Math.max.apply(null, temperatures);
+    var temperatureRange = new TemperatureRange(temperatures);
 
     // loop and render various bits
     for (var i = 0; i < hours.length; i++) {
-      this._renderHour(hours[i], lowTemperature, highTemperature);
-      this._renderTemp(hours[i], lowTemperature, highTemperature);
+      this._renderHour(hours[i], temperatureRange);
+      this._renderTemp(hours[i], temperatureRange);
       this._renderPrecip(hours[i]);
     }
 
 }
-ForecastRenderer.prototype._renderHour =  function(hourData, lowTemperature, highTemperature){
+ForecastRenderer.prototype._renderHour =  function(hourData, temperatureRange){
 
   // set up the element
   var hourLi = document.createElement('li');
@@ -33,16 +32,16 @@ ForecastRenderer.prototype._renderHour =  function(hourData, lowTemperature, hig
   this.hoursElement.appendChild(hourLi);
 
 
-  if (hourData.temperature === lowTemperature || hourData.temperature === highTemperature) {
+  if (temperatureRange.isExtreme(hourData.temperature)) {
     hourLi.innerText = hourData.hourNumber;
   }
 }
-ForecastRenderer.prototype._renderTemp = function(hourData, lowTemperature, highTemperature){
+ForecastRenderer.prototype._renderTemp = function(hourData, temperatureRange){
   var tempLi = document.createElement('li');
   tempLi.className = "hour";
   this.tempsElement.appendChild(tempLi);
 
-  if (hourData.temperature === highTemperature) {
+  if (temperatureRange.isHigh(hourData.temperature)) {
     var tempHighDiv = document.createElement('div');
     tempHighDiv.className = "temp-high";
     var tempHighSpan = document.createElement('span');
@@ -57,18 +56,14 @@ ForecastRenderer.prototype._renderTemp = function(hourData, lowTemperature, high
 
   var barDiv = document.createElement('div');
   barDiv.className = "bar";
-  var temperatureRange = highTemperature - lowTemperature;
-  var heightPercent = 100;
-  if (temperatureRange !== 0) {
-    heightPercent = ((hourData.temperature - lowTemperature) / temperatureRange) * 100;
-  }
+  var heightPercent = temperatureRange.heightPercentFor(hourData.temperature);
 
   barDiv.style.height = heightPercent + "%";
   barContainerDiv.appendChild(barDiv);
 
   var tempLowDiv = document.createElement('div');
   tempLowDiv.className = "temp-low";
-  if (hourData.temperature === lowTemperature) {
+  if (temperatureRange.isLow(hourData.temperature)) {
     var tempLowSpan = document.createElement('span');
     tempLowSpan.innerText = Math.round(hourData.temperature);
     tempLowDiv.appendChild(tempLowSpan);
