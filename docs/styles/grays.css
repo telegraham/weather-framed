@@ -6,175 +6,245 @@
 
 .gray-gallery-white {
   background-color: #FFFFFF;
-  background-image: url("../images/grays/01-gallery-white.svg");
+  /* background-image: url("../images/grays/01-gallery-white.svg"); */
+
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%208%208%22%3E%3Crect%20width=%228%22%20height=%228%22%20fill=%22%23fff%22/%3E%3C/svg%3E");
 }
 
 .gray-salt {
   background-color: #F7F7F7;
-  background-image: url("../images/grays/02-salt.svg");
+  /* background-image: url("../images/grays/02-salt.svg"); */
+
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%208%208%22%3E%3Crect%20fill=%22%23fff%22%20width=%228%22%20height=%228%22/%3E%3Crect%20x=%227%22%20y=%224%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%223%22%20width=%221%22%20height=%221%22/%3E%3C/svg%3E");
 }
 
 .gray-chalk {
   background-color: #F0F0F0;
-  background-image: url("../images/grays/03-chalk.svg");
+  /* background-image: url("../images/grays/03-chalk.svg"); */
+
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%208%208%22%3E%3Crect%20fill=%22%23fff%22%20width=%228%22%20height=%228%22/%3E%3Crect%20x=%227%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%227%22%20y=%224%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%223%22%20y=%224%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%223%22%20width=%221%22%20height=%221%22/%3E%3C/svg%3E");
 }
 
 .gray-plaster {
   background-color: #E8E8E8;
-  background-image: url("../images/grays/04-plaster.svg");
+  /* background-image: url("../images/grays/04-plaster.svg"); */
+
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%208%208%22%3E%3Crect%20fill=%22%23fff%22%20width=%228%22%20height=%228%22/%3E%3Crect%20x=%227%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%223%22%20y=%226%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%223%22%20y=%222%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%227%22%20y=%224%22%20width=%221%22%20height=%221%22/%3E%3C/svg%3E");
 }
 
 .gray-bone {
   background-color: #E0E0E0;
-  background-image: url("../images/grays/05-bone.svg");
+  /* background-image: url("../images/grays/05-bone.svg"); */
+
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%208%208%22%3E%3Crect%20fill=%22%23fff%22%20width=%228%22%20height=%228%22/%3E%3Crect%20x=%223%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%227%22%20y=%224%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%225%22%20y=%222%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%227%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%221%22%20y=%226%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%223%22%20y=%224%22%20width=%221%22%20height=%221%22/%3E%3C/svg%3E");
 }
 
 .gray-pearl {
   background-color: #D8D8D8;
-  background-image: url("../images/grays/06-pearl.svg");
+  /* background-image: url("../images/grays/06-pearl.svg"); */
+
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%208%208%22%3E%3Crect%20fill=%22%23fff%22%20y=%220%22%20width=%228%22%20height=%228%22/%3E%3Crect%20x=%223%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%227%22%20y=%224%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%225%22%20y=%222%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%227%22%20y=%220%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%221%22%20y=%226%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%223%22%20y=%224%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%221%22%20y=%222%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%225%22%20y=%226%22%20width=%221%22%20height=%221%22/%3E%3C/svg%3E");
 }
 
 .gray-linen {
   background-color: #D1D1D1;
-  background-image: url("../images/grays/07-linen.svg");
+  /* background-image: url("../images/grays/07-linen.svg"); */
+
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%208%208%22%3E%3Crect%20fill=%22%23fff%22%20width=%228%22%20height=%228%22/%3E%3Crect%20x=%223%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%227%22%20y=%224%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%227%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%223%22%20y=%224%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%225%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%221%22%20y=%224%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%223%22%20y=%222%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%221%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%225%22%20y=%224%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%227%22%20y=%222%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%223%22%20y=%226%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%227%22%20y=%226%22%20width=%221%22%20height=%221%22/%3E%3C/svg%3E");
 }
 
 .gray-oyster {
   background-color: #C9C9C9;
-  background-image: url("../images/grays/08-oyster.svg");
+  /* background-image: url("../images/grays/08-oyster.svg"); */
+
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%208%208%22%3E%3Crect%20fill=%22%23fff%22%20width=%228%22%20height=%228%22/%3E%3Crect%20x=%222%22%20y=%222%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%226%22%20y=%222%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%227%22%20y=%220%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%221%22%20y=%224%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%221%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%225%22%20y=%220%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%225%22%20y=%224%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%227%22%20y=%224%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%223%22%20y=%224%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%223%22%20y=%220%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%224%22%20y=%226%22%20width=%221%22%20height=%221%22/%3E%3Crect%20y=%226%22%20width=%221%22%20height=%221%22/%3E%3C/svg%3E");
 }
 
 .gray-mist {
   background-color: #C1C1C1;
-  background-image: url("../images/grays/09-mist.svg");
+  /* background-image: url("../images/grays/09-mist.svg"); */
+
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%208%208%22%3E%3Crect%20fill=%22%23fff%22%20width=%228%22%20height=%228%22/%3E%3Crect%20x=%223%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%227%22%20y=%224%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%225%22%20y=%222%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%227%22%20y=%220%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%221%22%20y=%226%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%223%22%20y=%224%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%221%22%20y=%222%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%225%22%20y=%226%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%225%22%20y=%220%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%221%22%20y=%224%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%223%22%20y=%222%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%221%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%225%22%20y=%224%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%227%22%20y=%222%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%223%22%20y=%226%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%227%22%20y=%226%22%20width=%221%22%20height=%221%22/%3E%3C/svg%3E");
 }
 
 .gray-ash {
   background-color: #B9B9B9;
-  background-image: url("../images/grays/10-ash.svg");
+  /* background-image: url("../images/grays/10-ash.svg"); */
+
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%208%208%22%3E%3Crect%20fill=%22%23fff%22%20y=%220%22%20width=%228%22%20height=%228%22/%3E%3Crect%20x=%221%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%225%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%221%22%20y=%224%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%223%22%20y=%223%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%227%22%20y=%223%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%225%22%20y=%224%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%227%22%20y=%221%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%223%22%20y=%221%22%20width=%221%22%20height=%221%22/%3E%3Cg%3E%3Crect%20x=%225%22%20y=%222%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%221%22%20y=%222%22%20width=%221%22%20height=%221%22/%3E%3C/g%3E%3Crect%20x=%227%22%20y=%225%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%223%22%20y=%225%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%221%22%20y=%226%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%225%22%20y=%226%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%227%22%20y=%227%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%223%22%20y=%227%22%20width=%221%22%20height=%221%22/%3E%3C/svg%3E");
 }
 
 .gray-moon {
   background-color: #B2B2B2;
-  background-image: url("../images/grays/11-moon.svg");
+  /* background-image: url("../images/grays/11-moon.svg"); */
+
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%208%208%22%3E%3Crect%20fill=%22%23fff%22%20width=%228%22%20height=%228%22/%3E%3Crect%20x=%223%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%227%22%20y=%224%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%225%22%20y=%222%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%227%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%221%22%20y=%226%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%223%22%20y=%224%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%221%22%20y=%222%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%225%22%20y=%226%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%225%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%221%22%20y=%224%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%223%22%20y=%222%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%221%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%225%22%20y=%224%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%227%22%20y=%222%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%223%22%20y=%226%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%227%22%20y=%226%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%226%22%20y=%221%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%222%22%20y=%225%22%20width=%221%22%20height=%221%22/%3E%3C/svg%3E");
 }
 
 .gray-nickel {
   background-color: #AAAAAA;
-  background-image: url("../images/grays/12-nickel.svg");
+  /* background-image: url("../images/grays/12-nickel.svg"); */
+
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%208%208%22%3E%3Crect%20fill=%22%23fff%22%20width=%228%22%20height=%228%22/%3E%3Crect%20x=%223%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%227%22%20y=%224%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%225%22%20y=%222%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%227%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%221%22%20y=%226%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%223%22%20y=%224%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%221%22%20y=%222%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%225%22%20y=%226%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%225%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%221%22%20y=%224%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%223%22%20y=%222%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%221%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%225%22%20y=%224%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%227%22%20y=%222%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%223%22%20y=%226%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%227%22%20y=%226%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%226%22%20y=%221%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%222%22%20y=%225%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%222%22%20y=%221%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%226%22%20y=%225%22%20width=%221%22%20height=%221%22/%3E%3C/svg%3E");
 }
 
 .gray-pewter {
   background-color: #A2A2A2;
-  background-image: url("../images/grays/13-pewter.svg");
+  /* background-image: url("../images/grays/13-pewter.svg"); */
+
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%208%208%22%3E%3Crect%20fill=%22%23fff%22%20width=%228%22%20height=%228%22/%3E%3Crect%20x=%223%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%227%22%20y=%224%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%225%22%20y=%222%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%227%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%221%22%20y=%226%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%223%22%20y=%224%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%221%22%20y=%222%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%225%22%20y=%226%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%225%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%221%22%20y=%224%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%223%22%20y=%222%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%221%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%225%22%20y=%224%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%227%22%20y=%222%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%223%22%20y=%226%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%227%22%20y=%226%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%226%22%20y=%221%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%222%22%20y=%225%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%222%22%20y=%221%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%226%22%20y=%225%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%224%22%20y=%223%22%20width=%221%22%20height=%221%22/%3E%3Crect%20y=%227%22%20width=%221%22%20height=%221%22/%3E%3C/svg%3E");
 }
 
 .gray-dove {
   background-color: #9B9B9B;
-  background-image: url("../images/grays/14-dove.svg");
+  /* background-image: url("../images/grays/14-dove.svg"); */
+
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%208%208%22%3E%3Crect%20fill=%22%23fff%22%20width=%228%22%20height=%228%22/%3E%3Crect%20x=%223%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%227%22%20y=%224%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%225%22%20y=%222%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%227%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%221%22%20y=%226%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%223%22%20y=%224%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%221%22%20y=%222%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%225%22%20y=%226%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%225%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%221%22%20y=%224%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%223%22%20y=%222%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%221%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%225%22%20y=%224%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%227%22%20y=%222%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%223%22%20y=%226%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%227%22%20y=%226%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%226%22%20y=%221%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%222%22%20y=%225%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%222%22%20y=%221%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%226%22%20y=%225%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%224%22%20y=%223%22%20width=%221%22%20height=%221%22/%3E%3Crect%20y=%227%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%224%22%20y=%227%22%20width=%221%22%20height=%221%22/%3E%3Crect%20y=%223%22%20width=%221%22%20height=%221%22/%3E%3C/svg%3E");
 }
 
 .gray-granite {
   background-color: #939393;
-  background-image: url("../images/grays/15-granite.svg");
+  /* background-image: url("../images/grays/15-granite.svg"); */
+
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%208%208%22%3E%3Crect%20fill=%22%23fff%22%20width=%228%22%20height=%228%22/%3E%3Crect%20x=%223%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%227%22%20y=%224%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%225%22%20y=%222%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%227%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%221%22%20y=%226%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%223%22%20y=%224%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%221%22%20y=%222%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%225%22%20y=%226%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%225%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%221%22%20y=%224%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%223%22%20y=%222%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%221%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%225%22%20y=%224%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%227%22%20y=%222%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%223%22%20y=%226%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%227%22%20y=%226%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%226%22%20y=%221%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%222%22%20y=%225%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%222%22%20y=%221%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%226%22%20y=%225%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%224%22%20y=%223%22%20width=%221%22%20height=%221%22/%3E%3Crect%20y=%227%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%224%22%20y=%227%22%20width=%221%22%20height=%221%22/%3E%3Crect%20y=%223%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%224%22%20y=%221%22%20width=%221%22%20height=%221%22/%3E%3Crect%20y=%225%22%20width=%221%22%20height=%221%22/%3E%3C/svg%3E");
 }
 
 .gray-shale {
   background-color: #8B8B8B;
-  background-image: url("../images/grays/16-shale.svg");
+  /* background-image: url("../images/grays/16-shale.svg"); */
+
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%208%208%22%3E%3Crect%20fill=%22%23fff%22%20width=%228%22%20height=%228%22/%3E%3Crect%20x=%223%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%227%22%20y=%224%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%225%22%20y=%222%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%227%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%221%22%20y=%226%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%223%22%20y=%224%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%221%22%20y=%222%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%225%22%20y=%226%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%225%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%221%22%20y=%224%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%223%22%20y=%222%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%221%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%225%22%20y=%224%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%227%22%20y=%222%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%223%22%20y=%226%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%227%22%20y=%226%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%222%22%20y=%221%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%224%22%20y=%223%22%20width=%221%22%20height=%221%22/%3E%3Crect%20y=%227%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%224%22%20y=%227%22%20width=%221%22%20height=%221%22/%3E%3Crect%20y=%223%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%224%22%20y=%221%22%20width=%221%22%20height=%221%22/%3E%3Crect%20y=%225%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%226%22%20y=%223%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%222%22%20y=%225%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%224%22%20y=%225%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%226%22%20y=%227%22%20width=%221%22%20height=%221%22/%3E%3Crect%20y=%221%22%20width=%221%22%20height=%221%22/%3E%3C/svg%3E");
 }
 
 .gray-iron-mist {
   background-color: #838383;
-  background-image: url("../images/grays/17-iron-mist.svg");
+  /* background-image: url("../images/grays/17-iron-mist.svg"); */
+
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%208%208%22%3E%3Crect%20fill=%22%23fff%22%20width=%228%22%20height=%228%22/%3E%3Crect%20x=%223%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%227%22%20y=%224%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%225%22%20y=%222%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%227%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%221%22%20y=%226%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%223%22%20y=%224%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%221%22%20y=%222%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%225%22%20y=%226%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%225%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%221%22%20y=%224%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%223%22%20y=%222%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%221%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%225%22%20y=%224%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%227%22%20y=%222%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%223%22%20y=%226%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%227%22%20y=%226%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%222%22%20y=%221%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%226%22%20y=%225%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%224%22%20y=%223%22%20width=%221%22%20height=%221%22/%3E%3Crect%20y=%227%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%224%22%20y=%227%22%20width=%221%22%20height=%221%22/%3E%3Crect%20y=%223%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%224%22%20y=%221%22%20width=%221%22%20height=%221%22/%3E%3Crect%20y=%225%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%226%22%20y=%223%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%222%22%20y=%223%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%224%22%20y=%225%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%226%22%20y=%227%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%222%22%20y=%227%22%20width=%221%22%20height=%221%22/%3E%3Crect%20y=%221%22%20width=%221%22%20height=%221%22/%3E%3C/svg%3E");
 }
 
 .gray-river-stone {
   background-color: #7C7C7C;
-  background-image: url("../images/grays/18-river-stone.svg");
+  /* background-image: url("../images/grays/18-river-stone.svg"); */
+
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%208%208%22%3E%3Crect%20fill=%22%23fff%22%20width=%228%22%20height=%228%22/%3E%3Crect%20x=%223%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%227%22%20y=%224%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%225%22%20y=%222%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%227%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%221%22%20y=%226%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%223%22%20y=%224%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%221%22%20y=%222%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%225%22%20y=%226%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%225%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%221%22%20y=%224%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%223%22%20y=%222%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%221%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%225%22%20y=%224%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%227%22%20y=%222%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%223%22%20y=%226%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%227%22%20y=%226%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%226%22%20y=%221%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%222%22%20y=%225%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%222%22%20y=%221%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%226%22%20y=%225%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%224%22%20y=%223%22%20width=%221%22%20height=%221%22/%3E%3Crect%20y=%227%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%224%22%20y=%227%22%20width=%221%22%20height=%221%22/%3E%3Crect%20y=%223%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%224%22%20y=%221%22%20width=%221%22%20height=%221%22/%3E%3Crect%20y=%225%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%226%22%20y=%223%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%222%22%20y=%223%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%224%22%20y=%225%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%226%22%20y=%227%22%20width=%221%22%20height=%221%22/%3E%3Crect%20x=%222%22%20y=%227%22%20width=%221%22%20height=%221%22/%3E%3Crect%20y=%221%22%20width=%221%22%20height=%221%22/%3E%3C/svg%3E");
 }
 
 .gray-storm {
   background-color: #747474;
-  background-image: url("../images/grays/19-storm.svg");
+  /* background-image: url("../images/grays/19-storm.svg"); */
+
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%208%208%22%3E%3Crect%20width=%228%22%20height=%228%22/%3E%3Crect%20fill=%22%23fff%22%20x=%223%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%227%22%20y=%224%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%225%22%20y=%222%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%227%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%221%22%20y=%226%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%223%22%20y=%224%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%221%22%20y=%222%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%225%22%20y=%226%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%225%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%221%22%20y=%224%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%223%22%20y=%222%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%221%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%225%22%20y=%224%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%227%22%20y=%222%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%223%22%20y=%226%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%227%22%20y=%226%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%222%22%20y=%221%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%226%22%20y=%225%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%224%22%20y=%223%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20y=%227%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%224%22%20y=%227%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20y=%223%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%224%22%20y=%221%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20y=%225%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%226%22%20y=%223%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%222%22%20y=%223%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%224%22%20y=%225%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%226%22%20y=%227%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%222%22%20y=%227%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20y=%221%22%20width=%221%22%20height=%221%22/%3E%3C/svg%3E");
 }
 
 .gray-slate {
   background-color: #6C6C6C;
-  background-image: url("../images/grays/20-slate.svg");
+  /* background-image: url("../images/grays/20-slate.svg"); */
+
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%208%208%22%3E%3Crect%20width=%228%22%20height=%228%22/%3E%3Crect%20fill=%22%23fff%22%20x=%223%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%227%22%20y=%224%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%225%22%20y=%222%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%227%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%221%22%20y=%226%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%223%22%20y=%224%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%221%22%20y=%222%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%225%22%20y=%226%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%225%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%221%22%20y=%224%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%223%22%20y=%222%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%221%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%225%22%20y=%224%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%227%22%20y=%222%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%223%22%20y=%226%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%227%22%20y=%226%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%222%22%20y=%221%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%224%22%20y=%223%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20y=%227%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%224%22%20y=%227%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20y=%223%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%224%22%20y=%221%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20y=%225%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%226%22%20y=%223%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%222%22%20y=%225%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%224%22%20y=%225%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%226%22%20y=%227%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20y=%221%22%20width=%221%22%20height=%221%22/%3E%3C/svg%3E");
 }
 
 .gray-flint {
   background-color: #646464;
-  background-image: url("../images/grays/21-flint.svg");
+  /* background-image: url("../images/grays/21-flint.svg"); */
+
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%208%208%22%3E%3Crect%20width=%228%22%20height=%228%22/%3E%3Crect%20fill=%22%23fff%22%20x=%223%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%227%22%20y=%224%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%225%22%20y=%222%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%227%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%221%22%20y=%226%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%223%22%20y=%224%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%221%22%20y=%222%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%225%22%20y=%226%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%225%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%221%22%20y=%224%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%223%22%20y=%222%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%221%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%225%22%20y=%224%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%227%22%20y=%222%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%223%22%20y=%226%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%227%22%20y=%226%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%226%22%20y=%221%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%222%22%20y=%225%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%222%22%20y=%221%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%226%22%20y=%225%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%224%22%20y=%223%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20y=%227%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%224%22%20y=%227%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20y=%223%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%224%22%20y=%221%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20y=%225%22%20width=%221%22%20height=%221%22/%3E%3C/svg%3E");
 }
 
 .gray-graphite {
   background-color: #5D5D5D;
-  background-image: url("../images/grays/22-graphite.svg");
+  /* background-image: url("../images/grays/22-graphite.svg"); */
+
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%208%208%22%3E%3Crect%20width=%228%22%20height=%228%22/%3E%3Crect%20fill=%22%23fff%22%20x=%223%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%227%22%20y=%224%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%225%22%20y=%222%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%227%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%221%22%20y=%226%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%223%22%20y=%224%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%221%22%20y=%222%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%225%22%20y=%226%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%225%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%221%22%20y=%224%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%223%22%20y=%222%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%221%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%225%22%20y=%224%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%227%22%20y=%222%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%223%22%20y=%226%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%227%22%20y=%226%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%226%22%20y=%221%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%222%22%20y=%225%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%222%22%20y=%221%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%226%22%20y=%225%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%224%22%20y=%223%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20y=%227%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%224%22%20y=%227%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20y=%223%22%20width=%221%22%20height=%221%22/%3E%3C/svg%3E");
 }
 
 .gray-steel {
   background-color: #555555;
-  background-image: url("../images/grays/23-steel.svg");
+  /* background-image: url("../images/grays/23-steel.svg"); */
+
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%208%208%22%3E%3Crect%20width=%228%22%20height=%228%22/%3E%3Crect%20fill=%22%23fff%22%20x=%223%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%227%22%20y=%224%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%225%22%20y=%222%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%227%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%221%22%20y=%226%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%223%22%20y=%224%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%221%22%20y=%222%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%225%22%20y=%226%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%225%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%221%22%20y=%224%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%223%22%20y=%222%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%221%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%225%22%20y=%224%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%227%22%20y=%222%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%223%22%20y=%226%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%227%22%20y=%226%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%226%22%20y=%221%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%222%22%20y=%225%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%222%22%20y=%221%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%226%22%20y=%225%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%224%22%20y=%223%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20y=%227%22%20width=%221%22%20height=%221%22/%3E%3C/svg%3E");
 }
 
 .gray-gunmetal {
   background-color: #4D4D4D;
-  background-image: url("../images/grays/24-gunmetal.svg");
+  /* background-image: url("../images/grays/24-gunmetal.svg"); */
+
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%208%208%22%3E%3Crect%20width=%228%22%20height=%228%22/%3E%3Crect%20fill=%22%23fff%22%20x=%223%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%227%22%20y=%224%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%225%22%20y=%222%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%227%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%221%22%20y=%226%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%223%22%20y=%224%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%221%22%20y=%222%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%225%22%20y=%226%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%225%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%221%22%20y=%224%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%223%22%20y=%222%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%221%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%225%22%20y=%224%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%227%22%20y=%222%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%223%22%20y=%226%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%227%22%20y=%226%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%226%22%20y=%221%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%222%22%20y=%225%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%222%22%20y=%221%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%226%22%20y=%225%22%20width=%221%22%20height=%221%22/%3E%3C/svg%3E");
 }
 
 .gray-wrought-iron {
   background-color: #464646;
-  background-image: url("../images/grays/25-wrought-iron.svg");
+  /* background-image: url("../images/grays/25-wrought-iron.svg"); */
+
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%208%208%22%3E%3Crect%20width=%228%22%20height=%228%22/%3E%3Crect%20fill=%22%23fff%22%20x=%223%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%227%22%20y=%224%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%225%22%20y=%222%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%227%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%221%22%20y=%226%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%223%22%20y=%224%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%221%22%20y=%222%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%225%22%20y=%226%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%225%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%221%22%20y=%224%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%223%22%20y=%222%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%221%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%225%22%20y=%224%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%227%22%20y=%222%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%223%22%20y=%226%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%227%22%20y=%226%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%226%22%20y=%221%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%222%22%20y=%225%22%20width=%221%22%20height=%221%22/%3E%3C/svg%3E");
 }
 
 .gray-pumice {
   background-color: #3E3E3E;
-  background-image: url("../images/grays/26-pumice.svg");
+  /* background-image: url("../images/grays/26-pumice.svg"); */
+
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%208%208%22%3E%3Crect%20y=%220%22%20width=%228%22%20height=%228%22/%3E%3Crect%20fill=%22%23fff%22%20x=%221%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%225%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%221%22%20y=%224%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%223%22%20y=%223%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%227%22%20y=%223%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%225%22%20y=%224%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%227%22%20y=%221%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%223%22%20y=%221%22%20width=%221%22%20height=%221%22/%3E%3Cg%3E%3Crect%20fill=%22%23fff%22%20x=%225%22%20y=%222%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%221%22%20y=%222%22%20width=%221%22%20height=%221%22/%3E%3C/g%3E%3Crect%20fill=%22%23fff%22%20x=%227%22%20y=%225%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%223%22%20y=%225%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%221%22%20y=%226%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%225%22%20y=%226%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%227%22%20y=%227%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%223%22%20y=%227%22%20width=%221%22%20height=%221%22/%3E%3C/svg%3E");
 }
 
 .gray-charcoal {
   background-color: #363636;
-  background-image: url("../images/grays/27-charcoal.svg");
+  /* background-image: url("../images/grays/27-charcoal.svg"); */
+
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%208%208%22%3E%3Crect%20width=%228%22%20height=%228%22/%3E%3Crect%20fill=%22%23fff%22%20x=%223%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%227%22%20y=%224%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%225%22%20y=%222%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%227%22%20y=%220%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%221%22%20y=%226%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%223%22%20y=%224%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%221%22%20y=%222%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%225%22%20y=%226%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%225%22%20y=%220%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%221%22%20y=%224%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%223%22%20y=%222%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%221%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%225%22%20y=%224%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%227%22%20y=%222%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%223%22%20y=%226%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%227%22%20y=%226%22%20width=%221%22%20height=%221%22/%3E%3C/svg%3E");
 }
 
 .gray-kelp {
   background-color: #2E2E2E;
-  background-image: url("../images/grays/28-kelp.svg");
+  /* background-image: url("../images/grays/28-kelp.svg"); */
+
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%208%208%22%3E%3Crect%20width=%228%22%20height=%228%22/%3E%3Crect%20fill=%22%23fff%22%20x=%222%22%20y=%222%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%226%22%20y=%222%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%227%22%20y=%220%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%221%22%20y=%224%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%221%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%225%22%20y=%220%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%225%22%20y=%224%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%227%22%20y=%224%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%223%22%20y=%224%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%223%22%20y=%220%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%224%22%20y=%226%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20y=%226%22%20width=%221%22%20height=%221%22/%3E%3C/svg%3E");
 }
 
 .gray-lampblack {
   background-color: #272727;
-  background-image: url("../images/grays/29-lampblack.svg");
+  /* background-image: url("../images/grays/29-lampblack.svg"); */
+
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%208%208%22%3E%3Crect%20width=%228%22%20height=%228%22/%3E%3Crect%20fill=%22%23fff%22%20x=%223%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%227%22%20y=%224%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%227%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%223%22%20y=%224%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%225%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%221%22%20y=%224%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%223%22%20y=%222%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%221%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%225%22%20y=%224%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%227%22%20y=%222%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%223%22%20y=%226%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%227%22%20y=%226%22%20width=%221%22%20height=%221%22/%3E%3C/svg%3E");
 }
 
 .gray-hematite {
   background-color: #1F1F1F;
-  background-image: url("../images/grays/30-hematite.svg");
+  /* background-image: url("../images/grays/30-hematite.svg"); */
+
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%208%208%22%3E%3Crect%20y=%220%22%20width=%228%22%20height=%228%22/%3E%3Crect%20fill=%22%23fff%22%20x=%223%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%227%22%20y=%224%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%225%22%20y=%222%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%227%22%20y=%220%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%221%22%20y=%226%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%223%22%20y=%224%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%221%22%20y=%222%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%225%22%20y=%226%22%20width=%221%22%20height=%221%22/%3E%3C/svg%3E");
 }
 
 .gray-peat {
   background-color: #171717;
-  background-image: url("../images/grays/31-peat.svg");
+  /* background-image: url("../images/grays/31-peat.svg"); */
+
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%208%208%22%3E%3Crect%20width=%228%22%20height=%228%22/%3E%3Crect%20fill=%22%23fff%22%20x=%223%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%227%22%20y=%224%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%225%22%20y=%222%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%227%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%221%22%20y=%226%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%223%22%20y=%224%22%20width=%221%22%20height=%221%22/%3E%3C/svg%3E");
 }
 
 .gray-ink {
   background-color: #111111;
-  background-image: url("../images/grays/32-ink.svg");
+  /* background-image: url("../images/grays/32-ink.svg"); */
+
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%208%208%22%3E%3Crect%20width=%228%22%20height=%228%22/%3E%3Crect%20fill=%22%23fff%22%20x=%227%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%223%22%20y=%226%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%223%22%20y=%222%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%227%22%20y=%224%22%20width=%221%22%20height=%221%22/%3E%3C/svg%3E");
 }
 
 .gray-cinder {
   background-color: #0D0D0D;
-  background-image: url("../images/grays/33-cinder.svg");
+  /* background-image: url("../images/grays/33-cinder.svg"); */
+
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%208%208%22%3E%3Crect%20width=%228%22%20height=%228%22/%3E%3Crect%20fill=%22%23fff%22%20x=%227%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%227%22%20y=%224%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%223%22%20y=%224%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%223%22%20width=%221%22%20height=%221%22/%3E%3C/svg%3E");
 }
 
 .gray-soot {
   background-color: #080808;
-  background-image: url("../images/grays/34-soot.svg");
+  /* background-image: url("../images/grays/34-soot.svg"); */
+
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%208%208%22%3E%3Crect%20width=%228%22%20height=%228%22/%3E%3Crect%20fill=%22%23fff%22%20x=%227%22%20y=%224%22%20width=%221%22%20height=%221%22/%3E%3Crect%20fill=%22%23fff%22%20x=%223%22%20width=%221%22%20height=%221%22/%3E%3C/svg%3E");
 }
 
 .gray-absolute-black {
   background-color: #000000;
-  background-image: url("../images/grays/35-absolute-black.svg");
+  /* background-image: url("../images/grays/35-absolute-black.svg"); */
+
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%208%208%22%3E%3Crect%20width=%228%22%20height=%228%22%20fill=%22%23000%22/%3E%3C/svg%3E");
 }
