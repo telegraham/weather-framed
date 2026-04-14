@@ -5,7 +5,7 @@ var lon = -73;
 var debug = true;
 
 var conditionsApiUrl = "test/conditions.json"
-var forecastApiUrl = "test/forecast.json"
+var forecastApiUrl = "test/forecast_norain.json"
 
 // var conditionsApiUrl = 'https://weather.googleapis.com/v1/currentConditions:lookup + 
 //           '?location.latitude=' + lat + 

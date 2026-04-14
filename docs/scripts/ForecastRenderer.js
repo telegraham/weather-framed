@@ -33,28 +33,34 @@ ForecastRenderer.prototype._renderHour = function(hourData){
 
   if (this.data.shouldLabelHour(hourData)) {
     hourLi.innerText = hourData.hourNumber;
+    return;
   }
+
+  hourLi.className += " empty";
+  hourLi.innerText = "•";
 }
 ForecastRenderer.prototype._renderTemp = function(hourData){
   var tempLi = document.createElement('li');
   tempLi.className = "hour";
   this.tempsElement.appendChild(tempLi);
 
+  var tempHighDiv = document.createElement('div');
+  tempHighDiv.className = "temp-high";
   if (this.data.temperatureRange.isHigh(hourData.temperature)) {
-    var tempHighDiv = document.createElement('div');
-    tempHighDiv.className = "temp-high";
     var tempHighSpan = document.createElement('span');
-    tempHighSpan.innerText = Math.round(hourData.temperature) + "°";
+    tempHighSpan.innerText = Math.round(hourData.temperature);
     tempHighDiv.appendChild(tempHighSpan);
-    tempLi.appendChild(tempHighDiv);
+  } else {
+    tempHighDiv.className += " temp-empty";
   }
+  tempLi.appendChild(tempHighDiv);
 
   var barContainerDiv = document.createElement('div');
   barContainerDiv.className = "bar-container";
   tempLi.appendChild(barContainerDiv);
 
   var barDiv = document.createElement('div');
-  barDiv.className = "bar";
+  barDiv.className = "bar temp-bar";
   var heightPercent = this.data.temperatureRange.heightPercentFor(hourData.temperature);
 
   barDiv.style.height = heightPercent + "%";
@@ -64,8 +70,10 @@ ForecastRenderer.prototype._renderTemp = function(hourData){
   tempLowDiv.className = "temp-low";
   if (this.data.temperatureRange.isLow(hourData.temperature)) {
     var tempLowSpan = document.createElement('span');
-    tempLowSpan.innerText = Math.round(hourData.temperature) + "°";
+    tempLowSpan.innerText = Math.round(hourData.temperature);
     tempLowDiv.appendChild(tempLowSpan);
+  } else {
+    tempLowDiv.className += " temp-empty";
   }
   tempLi.appendChild(tempLowDiv);
 }
@@ -81,7 +89,7 @@ ForecastRenderer.prototype._renderPrecip = function(hourData){
   this.precipsElement.appendChild(precipLi);
 
   var precipBarDiv = document.createElement('div');
-  precipBarDiv.className = "precip-bar";
+  precipBarDiv.className = "bar precip-bar";
   precipBarDiv.style.height = hourData.precipitationLikelihood + "%";
   precipLi.appendChild(precipBarDiv);
 
