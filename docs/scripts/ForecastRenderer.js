@@ -80,13 +80,16 @@ ForecastRenderer.prototype._renderTemp = function(hour){
 
   var barDiv = document.createElement('div');
   barDiv.className = "bar temp-bar";
-  var heightPercent = this.forecast.temperatureRange.heightPercentFor(hour.temperature);
+  var heightPercent = this.forecast.temperatureRange.percentFor(hour.temperature);
+  var temperatureColor = this._temperatureColorForPercent(heightPercent);
 
   barDiv.style.height = heightPercent + "%";
+  barDiv.style.background = temperatureColor;
   barContainerDiv.appendChild(barDiv);
 
   var tempLowDiv = document.createElement('div');
   tempLowDiv.className = "temp-low";
+  tempLowDiv.style.background = temperatureColor;
   if (this.forecast.temperatureRange.isLow(hour.temperature)) {
     var tempLowSpan = document.createElement('span');
     tempLowSpan.innerText = Math.round(hour.temperature);
@@ -96,6 +99,28 @@ ForecastRenderer.prototype._renderTemp = function(hour){
   }
   tempLi.appendChild(tempLowDiv);
 }
+ForecastRenderer.prototype._temperatureColorForPercent = function(percent) {
+  var lowChannel = 0x00;
+  var highChannel = 0xdd;
+  var normalizedPercent = percent;
+  var channel;
+  var hexChannel;
+
+  if (normalizedPercent < 0) {
+    normalizedPercent = 0;
+  } else if (normalizedPercent > 100) {
+    normalizedPercent = 100;
+  }
+
+  channel = Math.round(lowChannel + ((highChannel - lowChannel) * (normalizedPercent / 100)));
+  hexChannel = channel.toString(16);
+
+  if (hexChannel.length < 2) {
+    hexChannel = "0" + hexChannel;
+  }
+
+  return "#" + hexChannel + hexChannel + hexChannel;
+};
 ForecastRenderer.prototype._renderNoPrecipitation = function(){
   var noPrecipitationLi = document.createElement('li');
   noPrecipitationLi.className = "no-precip";
@@ -104,7 +129,7 @@ ForecastRenderer.prototype._renderNoPrecipitation = function(){
 }
 ForecastRenderer.prototype._renderPrecip = function(hour){
   var precipLi = document.createElement('li');
-  precipLi.className = "hour precip-hour";
+  precipLi.className = "hour precip-hour " + hour.sunStatuses.map(this._classNameForHourSunStatus, this).join(" ");
   this.precipsElement.appendChild(precipLi);
 
   var precipBarDiv = document.createElement('div');

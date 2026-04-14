@@ -19,7 +19,7 @@ TemperatureRange.prototype.spread = function() {
   return this.high - this.low;
 };
 
-TemperatureRange.prototype.heightPercentFor = function(temperature) {
+TemperatureRange.prototype.percentFor = function(temperature) {
   var spread = this.spread();
 
   if (spread === 0) {
