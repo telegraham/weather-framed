@@ -1,54 +1,73 @@
 function ForecastRenderer(config) {
-  this.data = config.data;
   this.tempsElement = config.tempsElement;
   this.hoursElement = config.hoursElement;
   this.precipsElement = config.precipsElement;
 }
-ForecastRenderer.prototype.render = function() {
-    var hours = this.data.visibleHours;
+ForecastRenderer.prototype.render = function(forecast) {
+   
+    this.tempsElement.innerHTML = "";
+    this.hoursElement.innerHTML = "";
+    this.precipsElement.innerHTML = "";
+
+    this.forecast = forecast;
+
+    var hours = this.forecast.hours();
 
     // loop and render various bits
-    hours.forEach(function(hourData) {
-      this._renderHour(hourData);
-      this._renderTemp(hourData);
+    hours.forEach(function(hour) {
+      this._renderHour(hour);
+      this._renderTemp(hour);
     }, this);
 
-    if (!this.data.hasPrecipitation()) {
+    if (!this.forecast.hasPrecipitation()) {
       this._renderNoPrecipitation();
       return;
     }
 
-    hours.forEach(function(hourData) {
-      this._renderPrecip(hourData);
+    hours.forEach(function(hour) {
+      this._renderPrecip(hour);
     }, this);
 
 }
-ForecastRenderer.prototype._renderHour = function(hourData){
+ForecastRenderer.prototype._renderHour = function(hour){
 
   // set up the element
   var hourLi = document.createElement('li');
-  hourLi.className = "hour";
+  hourLi.className = "hour " + hour.sunStatuses.map(this._classNameForHourSunStatus, this).join(" ");
   this.hoursElement.appendChild(hourLi);
 
-
-  if (this.data.shouldLabelHour(hourData)) {
-    hourLi.innerText = hourData.hourNumber;
+  if (this.forecast.shouldLabelHour(hour)) {
+    hourLi.innerText = hour.hourNumber;
     return;
   }
 
   hourLi.className += " empty";
   hourLi.innerText = "•";
 }
-ForecastRenderer.prototype._renderTemp = function(hourData){
+ForecastRenderer.prototype._classNameForHourSunStatus = function(sunStatus) {
+  switch (sunStatus) {
+    case "DAY":
+      return "day";
+    case "SUNSET":
+      return "sunset";
+    case "NIGHT":
+      return "night";
+    case "SUNRISE":
+      return "sunrise";
+    default:
+      return "";
+  }
+};
+ForecastRenderer.prototype._renderTemp = function(hour){
   var tempLi = document.createElement('li');
   tempLi.className = "hour";
   this.tempsElement.appendChild(tempLi);
 
   var tempHighDiv = document.createElement('div');
   tempHighDiv.className = "temp-high";
-  if (this.data.temperatureRange.isHigh(hourData.temperature)) {
+  if (this.forecast.temperatureRange.isHigh(hour.temperature)) {
     var tempHighSpan = document.createElement('span');
-    tempHighSpan.innerText = Math.round(hourData.temperature);
+    tempHighSpan.innerText = Math.round(hour.temperature);
     tempHighDiv.appendChild(tempHighSpan);
   } else {
     tempHighDiv.className += " temp-empty";
@@ -61,16 +80,16 @@ ForecastRenderer.prototype._renderTemp = function(hourData){
 
   var barDiv = document.createElement('div');
   barDiv.className = "bar temp-bar";
-  var heightPercent = this.data.temperatureRange.heightPercentFor(hourData.temperature);
+  var heightPercent = this.forecast.temperatureRange.heightPercentFor(hour.temperature);
 
   barDiv.style.height = heightPercent + "%";
   barContainerDiv.appendChild(barDiv);
 
   var tempLowDiv = document.createElement('div');
   tempLowDiv.className = "temp-low";
-  if (this.data.temperatureRange.isLow(hourData.temperature)) {
+  if (this.forecast.temperatureRange.isLow(hour.temperature)) {
     var tempLowSpan = document.createElement('span');
-    tempLowSpan.innerText = Math.round(hourData.temperature);
+    tempLowSpan.innerText = Math.round(hour.temperature);
     tempLowDiv.appendChild(tempLowSpan);
   } else {
     tempLowDiv.className += " temp-empty";
@@ -83,20 +102,20 @@ ForecastRenderer.prototype._renderNoPrecipitation = function(){
   noPrecipitationLi.innerText = "no precip";
   this.precipsElement.appendChild(noPrecipitationLi);
 }
-ForecastRenderer.prototype._renderPrecip = function(hourData){
+ForecastRenderer.prototype._renderPrecip = function(hour){
   var precipLi = document.createElement('li');
   precipLi.className = "hour precip-hour";
   this.precipsElement.appendChild(precipLi);
 
   var precipBarDiv = document.createElement('div');
   precipBarDiv.className = "bar precip-bar";
-  precipBarDiv.style.height = hourData.precipitationLikelihood + "%";
+  precipBarDiv.style.height = hour.precipitationLikelihood + "%";
   precipLi.appendChild(precipBarDiv);
 
-  if (this.data.shouldLabelPrecipitationBar(hourData)) {
+  if (this.forecast.shouldLabelPrecipitationBar(hour)) {
     var precipLabelSpan = document.createElement('span');
     precipLabelSpan.className = "precip-label";
-    precipLabelSpan.innerText = hourData.precipitationLikelihood + "%";
+    precipLabelSpan.innerText = hour.precipitationLikelihood + "%";
     precipBarDiv.appendChild(precipLabelSpan);
   }
 }

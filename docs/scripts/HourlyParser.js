@@ -1,17 +1,19 @@
-function ForecastParser(data) {
+function HourlyParser(data) {
   this.data = data;
 }
 
-// 3. Method on the Prototype (shared across all instances)
-ForecastParser.prototype.parse = function() {
+HourlyParser.prototype.parse = function() {
   var hours = this.data.forecastHours.map(function(forecastHour) {
-    return {
+    return new Hour({
       hourId: forecastHour.interval.startTime,
       hourNumber: forecastHour.displayDateTime.hours,
+      isDaytime: forecastHour.isDaytime,
+      startTime: forecastHour.interval.startTime,
+      // endTime: forecastHour.interval.endTime,
       temperature: forecastHour.temperature.degrees,
       precipitationLikelihood: forecastHour.precipitation.probability.percent
-    };
+    });
   });
 
-  return new Forecast(hours);
+  return hours;
 };

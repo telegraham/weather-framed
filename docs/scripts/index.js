@@ -5,7 +5,8 @@ var lon = -73;
 var debug = true;
 
 var conditionsApiUrl = "test/conditions.json"
-var forecastApiUrl = "test/forecast_norain.json"
+var forecastApiUrl = "test/forecast.json"
+var dailyApiUrl = "test/daily.json"
 
 // var conditionsApiUrl = 'https://weather.googleapis.com/v1/currentConditions:lookup + 
 //           '?location.latitude=' + lat + 
@@ -15,6 +16,12 @@ var forecastApiUrl = "test/forecast_norain.json"
 // var forecastApiUrl = 'https://weather.googleapis.com/v1/forecast/hours:lookup' + 
 //           '?location.latitude=' + lat + 
 //           '&location.longitude=' + lon + 
+//           '&unitsSystem=IMPERIAL' +
+//           '&key=' + apiKey;
+// var dailyApiUrl = 'https://weather.googleapis.com/v1/forecast/days:lookup' +
+//           '?location.latitude=' + lat +
+//           '&location.longitude=' + lon +
+//           '&days=2' +
 //           '&unitsSystem=IMPERIAL' +
 //           '&key=' + apiKey;
 
@@ -33,16 +40,23 @@ function fethc(url, callback) {
 	    if (xhr.readyState === 4) {
 	        // Status 200 means "OK"
 	        if (xhr.status === 200) {
+	            var data;
+
 	            try {
 	                // Parse the JSON string into a Javascript Object
-	                var data = JSON.parse(xhr.responseText);
-	                callback(data)
+	                data = JSON.parse(xhr.responseText);
 	            } catch (e) {
 	                console.error("Error parsing JSON:", e);
+	                xhr.onreadystatechange = null;
+	                return;
 	            }
+
+	            callback(data);
 	        } else {
 	            console.error("Error fetching data. Status:", xhr.status);
 	        }
+
+	        xhr.onreadystatechange = null;
 	    }
 	};
 
@@ -53,6 +67,19 @@ function fethc(url, callback) {
 
 
 document.addEventListener("DOMContentLoaded", function(event) { 
+
+	var forecastRenderer = new ForecastRenderer({
+		tempsElement: document.getElementById("temps"),
+		hoursElement: document.getElementById("hours"),
+		precipsElement: document.getElementById("precips"),
+	});
+
+	var forecastDataStore = new ForecastDataStore();
+
+	forecastDataStore.onUpdate(function(data){
+		var forecast = new Forecast(data);
+		forecastRenderer.render(forecast);
+	});
 	
 	fethc(conditionsApiUrl, function(conditionsData){
 		if (debug) console.log(conditionsData);
@@ -81,15 +108,18 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	fethc(forecastApiUrl, function(forecastData){
 		if (debug) console.log(forecastData);
 
-		var forecastParser = new ForecastParser(forecastData);
-		var forecastDataParsed = forecastParser.parse();
-		var forecastRenderer = new ForecastRenderer({
-			data: forecastDataParsed,
-			tempsElement: document.getElementById("temps"),
-			hoursElement: document.getElementById("hours"),
-			precipsElement: document.getElementById("precips"),
-		});
-		forecastRenderer.render();
+		var hourlyParser = new HourlyParser(forecastData);
+		var hourlyDataParsed = hourlyParser.parse();
+
+		forecastDataStore.addHourlyData(hourlyDataParsed);
 	})
 
+	fethc(dailyApiUrl, function(dailyData){
+		if (debug) console.log(dailyData);
+
+		var dailyParser = new DailyParser(dailyData);
+		var dailyDataParsed = dailyParser.parse();
+
+		forecastDataStore.addDailyData(dailyDataParsed);
+	})
 })
