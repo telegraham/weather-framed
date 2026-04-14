@@ -71,7 +71,7 @@ ForecastRenderer.prototype._renderTemp = function(hourData){
 }
 ForecastRenderer.prototype._renderNoPrecipitation = function(){
   var noPrecipitationLi = document.createElement('li');
-  noPrecipitationLi.className = "no-precipitation";
+  noPrecipitationLi.className = "no-precip";
   noPrecipitationLi.innerText = "no precip";
   this.precipsElement.appendChild(noPrecipitationLi);
 }
