@@ -8,7 +8,7 @@ ForecastParser.prototype.parse = function() {
 
 
   var hours = this.data.forecastHours.map(function(forecastHour) {
-    return { hourNumber: 6 }
+    return { hourNumber: forecastHour.displayDateTime.hours }
   });
 
   return { 
