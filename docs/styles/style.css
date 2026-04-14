@@ -1,0 +1,45 @@
+body {
+  font-family: 'Chillax-Light';
+}
+body.night {
+  background: black;
+  color: white;
+}
+img {
+  /* WebKit specific (older browsers) */
+  image-rendering: -webkit-optimize-contrast;
+  
+  /* Modern/Standardized properties */
+  image-rendering: crisp-edges;
+  image-rendering: pixelated; /* Preferred for pixel art */
+  height: 20%;
+}
+.wrapper {
+  padding: 50px;
+}
+h1.description {
+  font-size: 5rem;
+  font-weight: 200;
+}
+.hourly {
+  /*float: right;*/
+  /*width: 144px;*/
+  width: 100%;
+  background: gray;
+}
+.temps, .precips {
+  height: 180px;
+}
+.hours {
+  background: black;
+  height: 50px;
+}
+.hour {
+  float: left;
+  background: -webkit-linear-gradient(0deg,#000 0%, #fff 100%);
+  height: 100%;
+  width: 6.25% /* hard coded sixteenths */
+}
+.clearfix {
+  clear: both;
+}

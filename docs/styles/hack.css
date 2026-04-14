@@ -1,0 +1,63 @@
+ /*https://github.com/th0rgall/kindle-browser-tests/blob/main/tests/scrollbar/hide-scrollbar-overflow-width.html*/
+ html {
+    /* value somewhere over 13000 resets the scrollbar (max page height reached?) */
+    /* values higher than 100 somehow sets the viewport width higher o.O (zooms out) */
+    /* width: 200%; */
+
+    /* this is required for the below to work */
+    overflow: hidden;
+}
+
+body {
+    /* specific height is required */
+    height: 1231px;
+
+    /* for content width: 104% */
+    /* height: 1278px; */
+    /* behavior changes at 1279px: scrollbar stays, depending on .content width  */
+
+    /* works with content width UNSPECIFIED */
+    /* It only works with this 103% value or higher, not with px values */
+    /* only after first scroll */
+    /* also good: no horizontal scroll is actually allowed/possible */
+    /* builds in a padding on the right */
+    width: 103%;
+    /* The actual reported viewport width is 1072px */
+
+    /* Both scroll and hidden work */
+    /* hidden works better, as it really seems to kill the bar,
+        but only if the height _on the content_ is set */
+    /* overflow: scroll; */
+    overflow: hidden;
+
+
+    /* this affects the values */
+    /* margin: 0; */
+
+    /* Magic value that lets the full screen be used */
+    /* ...but seems to depend on content padding */
+    height: 1260px;
+
+}
+
+.content {
+    /* requires this to be scrollable, 
+    will show the bar only before the first scroll action */
+    overflow: scroll;
+
+    /* To use the full screen w */
+    /* width: 104%; */
+    /* width: 101%; */
+
+    /* height: 1231px; */
+
+    /* This is the max before the scrollbar reappears */
+    height: 1289px;
+
+}
+
+.content {
+    font-size: 40px;
+    /* padding here influences the appearance of the bar */
+    /* padding: 2rem; */
+}

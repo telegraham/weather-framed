@@ -1,12 +1,25 @@
 <!doctype html>
 <html>
     <head>
-        <link rel="stylesheet" href="reset.css" />
-        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="styles/reset.css" />
+        <link rel="stylesheet" href="styles/hack.css" />
+        <link rel="stylesheet" href="styles/fonts.css" />
+        <link rel="stylesheet" href="styles/style.css" />
+        <script type="text/javascript" src="scripts/ConditionsParser.js"></script>
+        <script type="text/javascript" src="scripts/ForecastParser.js"></script>
+        <script type="text/javascript" src="scripts/ConditionsRenderer.js"></script>
+        <script type="text/javascript" src="scripts/ForecastRenderer.js"></script>
+        <script type="text/javascript" src="scripts/index.js"></script>
     </head>
-    <body>
+    <body id="body">
         <div class="wrapper">
-            Hello, world!
-        </div>
+            <ol id="temps" class="hourly temps"></ol>
+            <ol id="hours" class="hourly hours"></ol>
+            <ol id="precips" class="hourly precips"></ol>
+            <!-- <div>
+                <h1 id="description" class="description">Sharknado</h1>
+                <image id="icon" src="images/sharknado.svg" />
+            </div> -->
+        </div> 
     </body>
 </html>
