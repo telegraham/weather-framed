@@ -87,9 +87,12 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		var conditionsParser = new ConditionsParser(conditionsData);
 		var conditionsDataParsed = conditionsParser.parse();
 		var conditionsRenderer = new ConditionsRenderer({
-			data: conditionsDataParsed
+			description: document.getElementById('description'),
+			icon: document.getElementById('icon'),
+			bodyElement: document.getElementById('body')
 		});
-		conditionsRenderer.render();
+		conditionsRenderer.render(conditionsDataParsed);
+			
 
 		// var description = document.getElementById('description');
 		// var icon = document.getElementById('icon');
@@ -99,7 +102,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		//     body.className = "day"
 		//     icon.src = conditionsData.weatherCondition.iconBaseUri + ".svg"
 		// } else {
-		//     body.className = "night"
+		//     body.className = "dark"
 		//     icon.src = conditionsData.weatherCondition.iconBaseUri + "_dark.svg"
 		// }
 		// description.innerText = conditionsData.weatherCondition.description.text;

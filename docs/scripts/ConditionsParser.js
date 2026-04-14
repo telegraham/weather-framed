@@ -4,5 +4,5 @@ function ConditionsParser(data) {
 
 // 3. Method on the Prototype (shared across all instances)
 ConditionsParser.prototype.parse = function() {
-  return {};
+  return { dark: !this.data.isDaytime };
 };

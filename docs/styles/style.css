@@ -1,7 +1,7 @@
 body {
   font-family: 'Chillax-Light';
 }
-body.night {
+body.dark {
   background: black;
   color: white;
 }
@@ -15,17 +15,29 @@ img {
   height: 20%;
 }
 .wrapper {
-  padding: 16px;
+  padding: 0 16px;
 }
-h1.description {
-  font-size: 5rem;
+.stats {
+  width: 100%;
+}
+.now, .today {
+  float: left;
+  height: 550px;
+  width: 50%;
+}
+.clearfix {
+  clear: both;
+}
+.description {
+  font-size: 2em;
   font-weight: 200;
 }
 .hourly {
   width: 100%;
+  /*background: pink;*/
 }
 .temps, .precips {
-  height: 480px;
+  height: 320px;
 }
 .hours {
   height: 65px;
@@ -38,7 +50,7 @@ h1.description {
 .hours .hour {
   font-family: 'Tanker-Regular';
   text-align: center;
-  font-size: 35px;
+  font-size: 42px;
   line-height: 65px; /* hard coded from .hours height */
 }
 .hours .hour.empty {
@@ -133,17 +145,23 @@ h1.description {
 }
 .precip-bar {
   top: 0;
-  /*background: -webkit-linear-gradient(-90deg, #444 0%, #888 100%);*/
 }
 .day .precip-bar {
-  background: -webkit-linear-gradient(-90deg, #888 0%, #ccc 100%);
+  background: #888; /*background: -webkit-linear-gradient(-90deg, #888 0%, #ccc 100%);*/
 }
 .night .precip-bar {
-  background: -webkit-linear-gradient(-90deg, #000 0%, #444 100%);
+  /* not #000 for dark mode */
+  background: #222; /*background: -webkit-linear-gradient(-90deg, #000 0%, #444 100%);*/
+}
+.night .over-50 .precip-label {
+  color: white;
+}
+.dark .day .over-50 .precip-label {
+  color: black;
 }
 .sunrise .precip-bar,
 .sunset .precip-bar {
-  background: -webkit-linear-gradient(-90deg, #444 0%, #888 100%);
+  background: #444; /*background: -webkit-linear-gradient(-90deg, #444 0%, #888 100%);*/
 }
 .precip-label {
   color: black;
@@ -155,6 +173,13 @@ h1.description {
   top: 100%;
   width: 100%;
   text-align: center;
+}
+.dark .precip-label{
+  color: white;
+}
+.over-50 .precip-label {
+  top: auto;
+  bottom: 0;
 }
 .no-precip {
   color: #000;

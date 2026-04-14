@@ -12,6 +12,8 @@ function Forecast(data, windowSize) {
     })
   };
 
+  this._visibleHours[0].isFirst = true;
+
   var temperatures = this._visibleHours.map(function(hour) {
     return hour.temperature;
   });
@@ -75,5 +77,5 @@ Forecast.prototype.shouldLabelPrecipitationBar = function(hour) {
 };
 
 Forecast.prototype.shouldLabelHour = function(hour) {
-  return this.temperatureRange.isExtreme(hour.temperature) || this.shouldLabelPrecipitationHour(hour);
+  return hour.isFirst || this.temperatureRange.isExtreme(hour.temperature) || this.shouldLabelPrecipitationHour(hour);
 };

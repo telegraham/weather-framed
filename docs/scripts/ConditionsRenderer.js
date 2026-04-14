@@ -1,6 +1,8 @@
-function ConditionsRenderer(data) {
-  this.data = data;
+function ConditionsRenderer(elements) {
+  this.bodyElement = elements.bodyElement
 }
-ConditionsRenderer.prototype.render = function() {
+ConditionsRenderer.prototype.render = function(data) {
+
+  if (data.dark) this.bodyElement.className = "dark";
   // return {};
 };

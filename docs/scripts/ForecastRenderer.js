@@ -100,7 +100,7 @@ ForecastRenderer.prototype._renderTemp = function(hour){
   tempLi.appendChild(tempLowDiv);
 }
 ForecastRenderer.prototype._temperatureColorForPercent = function(percent) {
-  var lowChannel = 0x00;
+  var lowChannel = 0x22;
   var highChannel = 0xdd;
   var normalizedPercent = percent;
   var channel;
@@ -133,7 +133,7 @@ ForecastRenderer.prototype._renderPrecip = function(hour){
   this.precipsElement.appendChild(precipLi);
 
   var precipBarDiv = document.createElement('div');
-  precipBarDiv.className = "bar precip-bar";
+  precipBarDiv.className = "bar precip-bar " + (hour.precipitationLikelihood > 50 ? "over-50" : "");
   precipBarDiv.style.height = hour.precipitationLikelihood + "%";
   precipLi.appendChild(precipBarDiv);
 
