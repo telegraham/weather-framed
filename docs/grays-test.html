@@ -1,0 +1,177 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" href="styles/reset.css" />
+        <link rel="stylesheet" href="styles/grays.css" />
+        <style>
+            body {
+                background: #fff;
+                padding: 24px;
+            }
+
+            .swatch-grid {
+                background: #000;
+                border: 1px solid #000;
+                box-sizing: border-box;
+                display: grid;
+                gap: 1px;
+                grid-template-columns: repeat(17, 18px);
+                grid-template-rows: repeat(2, 18px);
+                width: 324px;
+            }
+            .swatch-grid.og {
+                width: 305px;
+                grid-template-columns: repeat(16, 18px);
+            }
+
+            .pair-grid {
+                margin-top: 24px;
+                width: 324px;
+                grid-template-columns: repeat(17, 18px);
+                grid-template-rows: 18px 72px 18px 72px;
+            }
+
+            .swatch {
+                box-sizing: border-box;
+                height: 18px;
+                width: 18px;
+            }
+
+            .swatch.blank {
+                background: pink;
+            }
+
+            .swatch.spacer {
+                background: #fff;
+            }
+
+            .swatch-label {
+                align-items: center;
+                background: #fff;
+                box-sizing: border-box;
+                color: #000;
+                display: flex;
+                font-family: monospace;
+                font-size: 10px;
+                height: 72px;
+                justify-content: center;
+                line-height: 10px;
+                padding: 4px 0;
+                text-align: center;
+                width: 18px;
+                writing-mode: vertical-rl;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="swatch-grid og">
+            <div class="swatch gray-pattern gray-soot" title="34 soot"></div>
+            <div class="swatch gray-pattern gray-cinder" title="33 cinder"></div>
+            <div class="swatch gray-pattern gray-lampblack" title="29 lampblack"></div>
+            <div class="swatch gray-pattern gray-charcoal" title="27 charcoal"></div>
+            <div class="swatch gray-pattern gray-wrought-iron" title="25 wrought iron"></div>
+            <div class="swatch gray-pattern gray-steel" title="23 steel"></div>
+            <div class="swatch gray-pattern gray-flint" title="21 flint"></div>
+            <div class="swatch gray-pattern gray-storm" title="19 storm"></div>
+            <div class="swatch gray-pattern gray-iron-mist" title="17 iron mist"></div>
+            <div class="swatch gray-pattern gray-granite" title="15 granite"></div>
+            <div class="swatch gray-pattern gray-pewter" title="13 pewter"></div>
+            <div class="swatch gray-pattern gray-moon" title="11 moon"></div>
+            <div class="swatch gray-pattern gray-mist" title="09 mist"></div>
+            <div class="swatch gray-pattern gray-linen" title="07 linen"></div>
+            <div class="swatch gray-pattern gray-bone" title="05 bone"></div>
+            <div class="swatch gray-pattern gray-chalk" title="03 chalk"></div>
+
+            <div class="swatch gray-pattern gray-ink" title="32 ink"></div>
+            <div class="swatch gray-pattern gray-hematite" title="30 hematite"></div>
+            <div class="swatch gray-pattern gray-kelp" title="28 kelp"></div>
+            <div class="swatch gray-pattern gray-pumice" title="26 pumice"></div>
+            <div class="swatch gray-pattern gray-gunmetal" title="24 gunmetal"></div>
+            <div class="swatch gray-pattern gray-graphite" title="22 graphite"></div>
+            <div class="swatch gray-pattern gray-slate" title="20 slate"></div>
+            <div class="swatch gray-pattern gray-river-stone" title="18 river stone"></div>
+            <div class="swatch gray-pattern gray-shale" title="16 shale"></div>
+            <div class="swatch gray-pattern gray-dove" title="14 dove"></div>
+            <div class="swatch gray-pattern gray-nickel" title="12 nickel"></div>
+            <div class="swatch gray-pattern gray-ash" title="10 ash"></div>
+            <div class="swatch gray-pattern gray-oyster" title="08 oyster"></div>
+            <div class="swatch gray-pattern gray-pearl" title="06 pearl"></div>
+            <div class="swatch gray-pattern gray-plaster" title="04 plaster"></div>
+            <div class="swatch gray-pattern gray-salt" title="02 salt"></div>
+        </div>
+
+        <div class="swatch-grid pair-grid">
+            <div class="swatch gray-pattern gray-salt" title="02 salt"></div>
+            <div class="swatch gray-pattern gray-plaster" title="04 plaster"></div>
+            <div class="swatch gray-pattern gray-chalk" title="03 chalk"></div>
+            <div class="swatch gray-pattern gray-bone" title="05 bone"></div>
+            <div class="swatch gray-pattern gray-pearl" title="06 pearl"></div>
+            <div class="swatch gray-pattern gray-linen" title="07 linen"></div>
+            <div class="swatch gray-pattern gray-oyster" title="08 oyster"></div>
+            <div class="swatch gray-pattern gray-mist" title="09 mist"></div>
+            <div class="swatch gray-pattern gray-ash" title="10 ash"></div>
+            <div class="swatch gray-pattern gray-moon" title="11 moon"></div>
+            <div class="swatch gray-pattern gray-nickel" title="12 nickel"></div>
+            <div class="swatch gray-pattern gray-pewter" title="13 pewter"></div>
+            <div class="swatch gray-pattern gray-dove" title="14 dove"></div>
+            <div class="swatch gray-pattern gray-granite" title="15 granite"></div>
+            <div class="swatch gray-pattern gray-shale" title="16 shale"></div>
+            <div class="swatch gray-pattern gray-iron-mist" title="17 iron mist"></div>
+            <div class="swatch blank" title="18 river stone has no pair"></div>
+
+            <div class="swatch-label" title="02 salt">salt</div>
+            <div class="swatch-label" title="04 plaster">plaster</div>
+            <div class="swatch-label" title="03 chalk">chalk</div>
+            <div class="swatch-label" title="05 bone">bone</div>
+            <div class="swatch-label" title="06 pearl">pearl</div>
+            <div class="swatch-label" title="07 linen">linen</div>
+            <div class="swatch-label" title="08 oyster">oyster</div>
+            <div class="swatch-label" title="09 mist">mist</div>
+            <div class="swatch-label" title="10 ash">ash</div>
+            <div class="swatch-label" title="11 moon">moon</div>
+            <div class="swatch-label" title="12 nickel">nickel</div>
+            <div class="swatch-label" title="13 pewter">pewter</div>
+            <div class="swatch-label" title="14 dove">dove</div>
+            <div class="swatch-label" title="15 granite">granite</div>
+            <div class="swatch-label" title="16 shale">shale</div>
+            <div class="swatch-label" title="17 iron mist">iron mist</div>
+            <div class="swatch-label" title="18 river stone has no pair">n/a</div>
+
+            <div class="swatch gray-pattern gray-soot" title="34 soot"></div>
+            <div class="swatch gray-pattern gray-ink" title="32 ink"></div>
+            <div class="swatch gray-pattern gray-cinder" title="33 cinder"></div>
+            <div class="swatch gray-pattern gray-peat" title="31 peat"></div>
+            <div class="swatch gray-pattern gray-hematite" title="30 hematite"></div>
+            <div class="swatch gray-pattern gray-lampblack" title="29 lampblack"></div>
+            <div class="swatch gray-pattern gray-kelp" title="28 kelp"></div>
+            <div class="swatch gray-pattern gray-charcoal" title="27 charcoal"></div>
+            <div class="swatch gray-pattern gray-pumice" title="26 pumice"></div>
+            <div class="swatch gray-pattern gray-wrought-iron" title="25 wrought iron"></div>
+            <div class="swatch gray-pattern gray-gunmetal" title="24 gunmetal"></div>
+            <div class="swatch gray-pattern gray-steel" title="23 steel"></div>
+            <div class="swatch gray-pattern gray-graphite" title="22 graphite"></div>
+            <div class="swatch gray-pattern gray-flint" title="21 flint"></div>
+            <div class="swatch gray-pattern gray-slate" title="20 slate"></div>
+            <div class="swatch gray-pattern gray-storm" title="19 storm"></div>
+            <div class="swatch gray-pattern gray-river-stone" title="18 river stone"></div>
+
+            <div class="swatch-label" title="34 soot">soot</div>
+            <div class="swatch-label" title="32 ink">ink</div>
+            <div class="swatch-label" title="33 cinder">cinder</div>
+            <div class="swatch-label" title="31 peat">peat</div>
+            <div class="swatch-label" title="30 hematite">hematite</div>
+            <div class="swatch-label" title="29 lampblack">lampblack</div>
+            <div class="swatch-label" title="28 kelp">kelp</div>
+            <div class="swatch-label" title="27 charcoal">charcoal</div>
+            <div class="swatch-label" title="26 pumice">pumice</div>
+            <div class="swatch-label" title="25 wrought iron">wrought iron</div>
+            <div class="swatch-label" title="24 gunmetal">gunmetal</div>
+            <div class="swatch-label" title="23 steel">steel</div>
+            <div class="swatch-label" title="22 graphite">graphite</div>
+            <div class="swatch-label" title="21 flint">flint</div>
+            <div class="swatch-label" title="20 slate">slate</div>
+            <div class="swatch-label" title="19 storm">storm</div>
+            <div class="swatch-label" title="18 river stone">river stone</div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,180 @@
+.gray-pattern {
+  background-position: 0 0;
+  background-repeat: repeat;
+  background-size: 8px 8px;
+}
+
+.gray-gallery-white {
+  background-color: #FFFFFF;
+  background-image: url("../images/grays/01-gallery-white.svg");
+}
+
+.gray-salt {
+  background-color: #F7F7F7;
+  background-image: url("../images/grays/02-salt.svg");
+}
+
+.gray-chalk {
+  background-color: #F0F0F0;
+  background-image: url("../images/grays/03-chalk.svg");
+}
+
+.gray-plaster {
+  background-color: #E8E8E8;
+  background-image: url("../images/grays/04-plaster.svg");
+}
+
+.gray-bone {
+  background-color: #E0E0E0;
+  background-image: url("../images/grays/05-bone.svg");
+}
+
+.gray-pearl {
+  background-color: #D8D8D8;
+  background-image: url("../images/grays/06-pearl.svg");
+}
+
+.gray-linen {
+  background-color: #D1D1D1;
+  background-image: url("../images/grays/07-linen.svg");
+}
+
+.gray-oyster {
+  background-color: #C9C9C9;
+  background-image: url("../images/grays/08-oyster.svg");
+}
+
+.gray-mist {
+  background-color: #C1C1C1;
+  background-image: url("../images/grays/09-mist.svg");
+}
+
+.gray-ash {
+  background-color: #B9B9B9;
+  background-image: url("../images/grays/10-ash.svg");
+}
+
+.gray-moon {
+  background-color: #B2B2B2;
+  background-image: url("../images/grays/11-moon.svg");
+}
+
+.gray-nickel {
+  background-color: #AAAAAA;
+  background-image: url("../images/grays/12-nickel.svg");
+}
+
+.gray-pewter {
+  background-color: #A2A2A2;
+  background-image: url("../images/grays/13-pewter.svg");
+}
+
+.gray-dove {
+  background-color: #9B9B9B;
+  background-image: url("../images/grays/14-dove.svg");
+}
+
+.gray-granite {
+  background-color: #939393;
+  background-image: url("../images/grays/15-granite.svg");
+}
+
+.gray-shale {
+  background-color: #8B8B8B;
+  background-image: url("../images/grays/16-shale.svg");
+}
+
+.gray-iron-mist {
+  background-color: #838383;
+  background-image: url("../images/grays/17-iron-mist.svg");
+}
+
+.gray-river-stone {
+  background-color: #7C7C7C;
+  background-image: url("../images/grays/18-river-stone.svg");
+}
+
+.gray-storm {
+  background-color: #747474;
+  background-image: url("../images/grays/19-storm.svg");
+}
+
+.gray-slate {
+  background-color: #6C6C6C;
+  background-image: url("../images/grays/20-slate.svg");
+}
+
+.gray-flint {
+  background-color: #646464;
+  background-image: url("../images/grays/21-flint.svg");
+}
+
+.gray-graphite {
+  background-color: #5D5D5D;
+  background-image: url("../images/grays/22-graphite.svg");
+}
+
+.gray-steel {
+  background-color: #555555;
+  background-image: url("../images/grays/23-steel.svg");
+}
+
+.gray-gunmetal {
+  background-color: #4D4D4D;
+  background-image: url("../images/grays/24-gunmetal.svg");
+}
+
+.gray-wrought-iron {
+  background-color: #464646;
+  background-image: url("../images/grays/25-wrought-iron.svg");
+}
+
+.gray-pumice {
+  background-color: #3E3E3E;
+  background-image: url("../images/grays/26-pumice.svg");
+}
+
+.gray-charcoal {
+  background-color: #363636;
+  background-image: url("../images/grays/27-charcoal.svg");
+}
+
+.gray-kelp {
+  background-color: #2E2E2E;
+  background-image: url("../images/grays/28-kelp.svg");
+}
+
+.gray-lampblack {
+  background-color: #272727;
+  background-image: url("../images/grays/29-lampblack.svg");
+}
+
+.gray-hematite {
+  background-color: #1F1F1F;
+  background-image: url("../images/grays/30-hematite.svg");
+}
+
+.gray-peat {
+  background-color: #171717;
+  background-image: url("../images/grays/31-peat.svg");
+}
+
+.gray-ink {
+  background-color: #111111;
+  background-image: url("../images/grays/32-ink.svg");
+}
+
+.gray-cinder {
+  background-color: #0D0D0D;
+  background-image: url("../images/grays/33-cinder.svg");
+}
+
+.gray-soot {
+  background-color: #080808;
+  background-image: url("../images/grays/34-soot.svg");
+}
+
+.gray-absolute-black {
+  background-color: #000000;
+  background-image: url("../images/grays/35-absolute-black.svg");
+}
