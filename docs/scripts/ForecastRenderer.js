@@ -19,13 +19,13 @@ ForecastRenderer.prototype.render = function() {
 
     // loop and render various bits
     for (var i = 0; i < hours.length; i++) {
-      this._renderHour(hours[i]);
+      this._renderHour(hours[i], lowTemperature, highTemperature);
       this._renderTemp(hours[i], lowTemperature, highTemperature);
       this._renderPrecip(hours[i]);
     }
 
 }
-ForecastRenderer.prototype._renderHour =  function(hourData){
+ForecastRenderer.prototype._renderHour =  function(hourData, lowTemperature, highTemperature){
 
   // set up the element
   var hourLi = document.createElement('li');
@@ -33,22 +33,47 @@ ForecastRenderer.prototype._renderHour =  function(hourData){
   this.hoursElement.appendChild(hourLi);
 
 
-  hourLi.innerText = hourData.hourNumber;
+  if (hourData.temperature === lowTemperature || hourData.temperature === highTemperature) {
+    hourLi.innerText = hourData.hourNumber;
+  }
 }
 ForecastRenderer.prototype._renderTemp = function(hourData, lowTemperature, highTemperature){
   var tempLi = document.createElement('li');
   tempLi.className = "hour";
   this.tempsElement.appendChild(tempLi);
 
-  var tempDiv = document.createElement('div');
+  if (hourData.temperature === highTemperature) {
+    var tempHighDiv = document.createElement('div');
+    tempHighDiv.className = "temp-high";
+    var tempHighSpan = document.createElement('span');
+    tempHighSpan.innerText = Math.round(hourData.temperature);
+    tempHighDiv.appendChild(tempHighSpan);
+    tempLi.appendChild(tempHighDiv);
+  }
+
+  var barContainerDiv = document.createElement('div');
+  barContainerDiv.className = "bar-container";
+  tempLi.appendChild(barContainerDiv);
+
+  var barDiv = document.createElement('div');
+  barDiv.className = "bar";
   var temperatureRange = highTemperature - lowTemperature;
   var heightPercent = 100;
   if (temperatureRange !== 0) {
     heightPercent = ((hourData.temperature - lowTemperature) / temperatureRange) * 100;
   }
 
-  tempDiv.style.height = heightPercent + "%";
-  tempLi.appendChild(tempDiv);
+  barDiv.style.height = heightPercent + "%";
+  barContainerDiv.appendChild(barDiv);
+
+  var tempLowDiv = document.createElement('div');
+  tempLowDiv.className = "temp-low";
+  if (hourData.temperature === lowTemperature) {
+    var tempLowSpan = document.createElement('span');
+    tempLowSpan.innerText = Math.round(hourData.temperature);
+    tempLowDiv.appendChild(tempLowSpan);
+  }
+  tempLi.appendChild(tempLowDiv);
 }
 ForecastRenderer.prototype._renderPrecip = function(){
 

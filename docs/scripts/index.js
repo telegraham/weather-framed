@@ -10,10 +10,12 @@ var forecastApiUrl = "test/forecast.json"
 // var conditionsApiUrl = 'https://weather.googleapis.com/v1/currentConditions:lookup + 
 //           '?location.latitude=' + lat + 
 //           '&location.longitude=' + lon + 
+//           '&unitsSystem=IMPERIAL' +
 //           '&key=' + apiKey;
 // var forecastApiUrl = 'https://weather.googleapis.com/v1/forecast/hours:lookup' + 
 //           '?location.latitude=' + lat + 
 //           '&location.longitude=' + lon + 
+//           '&unitsSystem=IMPERIAL' +
 //           '&key=' + apiKey;
 
 
