@@ -50,6 +50,9 @@ h1.description {
 .temps .hour {
   position: relative;
 }
+.precips .hour {
+  position: relative;
+}
 .temp-high,
 .temp-low,
 .bar-container {
@@ -93,6 +96,36 @@ h1.description {
 }
 .temp-low span {
   top: 0;
+}
+.precip-hour {
+  overflow: visible;
+}
+.precip-bar {
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background: black;
+}
+.precip-label {
+  color: white;
+  font-family: 'Tanker-Regular';
+  font-size: 36px;
+  left: 0;
+  line-height: 44px;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  text-align: center;
+}
+.no-rain {
+  color: white;
+  float: none;
+  font-family: 'Chillax-Extralight';
+  font-size: 180px;
+  line-height: 360px;
+  text-align: center;
+  width: 100%;
 }
 .clearfix {
   clear: both;

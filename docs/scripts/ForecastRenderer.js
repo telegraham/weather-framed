@@ -15,16 +15,32 @@ ForecastRenderer.prototype.render = function() {
       return hourData.temperature;
     });
     var temperatureRange = new TemperatureRange(temperatures);
+    var precipitationLikelihoods = hours.map(function(hourData) {
+      return hourData.precipitationLikelihood;
+    });
+    var highestPrecipitationLikelihood = Math.max.apply(null, precipitationLikelihoods);
+    var highlights = {
+      temperatureRange: temperatureRange,
+      highestPrecipitationLikelihood: highestPrecipitationLikelihood
+    };
 
     // loop and render various bits
     for (var i = 0; i < hours.length; i++) {
-      this._renderHour(hours[i], temperatureRange);
+      this._renderHour(hours[i], highlights);
       this._renderTemp(hours[i], temperatureRange);
-      this._renderPrecip(hours[i]);
+    }
+
+    if (highestPrecipitationLikelihood === 0) {
+      this._renderNoRain();
+      return;
+    }
+
+    for (var j = 0; j < hours.length; j++) {
+      this._renderPrecip(hours[j], highestPrecipitationLikelihood);
     }
 
 }
-ForecastRenderer.prototype._renderHour =  function(hourData, temperatureRange){
+ForecastRenderer.prototype._renderHour = function(hourData, highlights){
 
   // set up the element
   var hourLi = document.createElement('li');
@@ -32,7 +48,13 @@ ForecastRenderer.prototype._renderHour =  function(hourData, temperatureRange){
   this.hoursElement.appendChild(hourLi);
 
 
-  if (temperatureRange.isExtreme(hourData.temperature)) {
+  if (
+    highlights.temperatureRange.isExtreme(hourData.temperature) ||
+    (
+      highlights.highestPrecipitationLikelihood > 0 &&
+      hourData.precipitationLikelihood === highlights.highestPrecipitationLikelihood
+    )
+  ) {
     hourLi.innerText = hourData.hourNumber;
   }
 }
@@ -70,6 +92,26 @@ ForecastRenderer.prototype._renderTemp = function(hourData, temperatureRange){
   }
   tempLi.appendChild(tempLowDiv);
 }
-ForecastRenderer.prototype._renderPrecip = function(){
+ForecastRenderer.prototype._renderNoRain = function(){
+  var noRainLi = document.createElement('li');
+  noRainLi.className = "no-rain";
+  noRainLi.innerText = "no rain";
+  this.precipsElement.appendChild(noRainLi);
+}
+ForecastRenderer.prototype._renderPrecip = function(hourData, highestPrecipitationLikelihood){
+  var precipLi = document.createElement('li');
+  precipLi.className = "hour precip-hour";
+  this.precipsElement.appendChild(precipLi);
 
+  var precipBarDiv = document.createElement('div');
+  precipBarDiv.className = "precip-bar";
+  precipBarDiv.style.height = hourData.precipitationLikelihood + "%";
+  precipLi.appendChild(precipBarDiv);
+
+  if (hourData.precipitationLikelihood === highestPrecipitationLikelihood) {
+    var precipLabelSpan = document.createElement('span');
+    precipLabelSpan.className = "precip-label";
+    precipLabelSpan.innerText = hourData.precipitationLikelihood + "%";
+    precipBarDiv.appendChild(precipLabelSpan);
+  }
 }
