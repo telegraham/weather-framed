@@ -4,7 +4,7 @@ function HourlyParser(data) {
 
 HourlyParser.prototype.parse = function() {
   var hours = this.data.forecastHours.map(function(forecastHour) {
-    return new Hour({
+    return {
       hourId: forecastHour.interval.startTime,
       hourNumber: forecastHour.displayDateTime.hours,
       isDaytime: forecastHour.isDaytime,
@@ -12,7 +12,7 @@ HourlyParser.prototype.parse = function() {
       // endTime: forecastHour.interval.endTime,
       temperature: forecastHour.temperature.degrees,
       precipitationLikelihood: forecastHour.precipitation.probability.percent
-    });
+    };
   });
 
   return hours;

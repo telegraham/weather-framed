@@ -6,11 +6,10 @@ function Hour(config) {
   // this.endTime = config.endTime;
   this.temperature = config.temperature;
   this.precipitationLikelihood = config.precipitationLikelihood;
-  this.sunStatuses = [];
+  this.sunStatuses = config.sunStatuses || [];
+  this.isFirst = !!config.isFirst;
 }
-Hour.prototype.decorateWithSunStatus = function(days){
-  this.sunStatuses = Hour.sunStatuses(this, days);
-}
+
 Hour.sunStatuses = function(hour, days) {
   if (!days) {
     return hour.isDaytime ? ["DAY"] : ["NIGHT"];

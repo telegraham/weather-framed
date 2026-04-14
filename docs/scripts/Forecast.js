@@ -1,20 +1,23 @@
 function Forecast(data, windowSize) {
-  var hours = data.hours;
+  var rawHours = data.hours;
   var days = data.days;
 
   var windowSize = typeof windowSize === "number" ? windowSize : Forecast.DEFAULT_WINDOW_SIZE;
 
-  this._visibleHours = hours.slice(0, windowSize);
+  this._hours = rawHours.slice(0, windowSize).map(function(rawHour, index) {
+    return new Hour({
+      hourId: rawHour.hourId,
+      hourNumber: rawHour.hourNumber,
+      isDaytime: rawHour.isDaytime,
+      startTime: rawHour.startTime,
+      temperature: rawHour.temperature,
+      precipitationLikelihood: rawHour.precipitationLikelihood,
+      sunStatuses: Hour.sunStatuses(rawHour, days),
+      isFirst: index === 0
+    });
+  });
 
-  if (days) {
-    this._visibleHours.forEach(function(hour){
-      hour.decorateWithSunStatus(days);
-    })
-  };
-
-  this._visibleHours[0].isFirst = true;
-
-  var temperatures = this._visibleHours.map(function(hour) {
+  var temperatures = this._hours.map(function(hour) {
     return hour.temperature;
   });
   this.temperatureRange = new TemperatureRange(temperatures);
@@ -24,7 +27,7 @@ function Forecast(data, windowSize) {
 }
 
 Forecast.prototype.hours = function() {
-  return this._visibleHours;
+  return this._hours;
 }
 
 Forecast.DEFAULT_WINDOW_SIZE = 16;
@@ -33,8 +36,8 @@ Forecast.prototype._findPrecipitationPeriods = function() {
   var precipitationPeriods = [];
   var currentPeriodHours = [];
 
-  for (var i = 0; i < this._visibleHours.length; i++) {
-    var hour = this._visibleHours[i];
+  for (var i = 0; i < this._hours.length; i++) {
+    var hour = this._hours[i];
 
     if (hour.precipitationLikelihood === 0) {
       if (currentPeriodHours.length) {
