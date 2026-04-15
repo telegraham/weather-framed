@@ -42,7 +42,7 @@ ForecastRenderer.prototype._renderHour = function(hour){
   }
 
   hourLi.className += " empty";
-  hourLi.innerText = "•";
+  hourLi.innerHTML = "&#8226;";
 }
 ForecastRenderer.prototype._classNameForHourSunStatus = function(sunStatus) {
   switch (sunStatus) {

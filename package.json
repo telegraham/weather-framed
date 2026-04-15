@@ -1,0 +1,7 @@
+{
+  "name": "weather-framed",
+  "private": true,
+  "scripts": {
+    "start": "live-server docs --port=8080"
+  }
+}

@@ -1,6 +1,8 @@
 <!doctype html>
-<html>
+<html class="config-pending">
     <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Weather</title>
         <link rel="stylesheet" href="styles/reset.css" />
         <link rel="stylesheet" href="styles/hack.css" />
         <link rel="stylesheet" href="styles/fonts.css" />
@@ -16,9 +18,39 @@
         <script type="text/javascript" src="scripts/Forecast.js"></script>
         <script type="text/javascript" src="scripts/ConditionsRenderer.js"></script>
         <script type="text/javascript" src="scripts/ForecastRenderer.js"></script>
+        <script type="text/javascript" src="scripts/ConfigOverlay.js"></script>
+        <script type="text/javascript" src="scripts/ResetOverlay.js"></script>
         <script type="text/javascript" src="scripts/index.js"></script>
     </head>
     <body id="body">
+        <div id="config-overlay" class="config-overlay">
+            <form id="config-form" class="config-panel">
+                <h1 id="config-title" class="config-title">Set up Weather</h1>
+                <p class="config-copy">This runs once on this device. Save your API key and coordinates to start the forecast.</p>
+                <div class="config-field">
+                    <div class="config-label">API key</div>
+                    <input id="api-key" name="apiKey" type="text" />
+                </div>
+                <div class="config-field">
+                    <div class="config-label">Lat</div>
+                    <input id="latitude" name="lat" type="text" />
+                </div>
+                <div class="config-field">
+                    <div class="config-label">Long</div>
+                    <input id="longitude" name="lon" type="text" />
+                </div>
+                <div id="config-error" class="config-error"></div>
+                <input class="config-submit" type="submit" value="Save and load weather" />
+            </form>
+        </div>
+        <div id="reset-overlay" class="reset-overlay">
+            <div class="reset-panel">
+                <h1 class="reset-title">Reset local storage</h1>
+                <p id="reset-age" class="reset-copy"></p>
+                <input id="reset-button" class="reset-button" type="button" value="Clear local storage" />
+                <p id="reset-status" class="reset-status"></p>
+            </div>
+        </div>
         <div class="wrapper">
             <div class="stats">
                 <div class="now">
@@ -26,7 +58,7 @@
                     <image id="icon" src="./images/sharknado.svg" />
                 </div>
                 <div class="today"></div>
-                <div class="clearfix"><div>
+                <div class="clearfix"></div>
             </div>
             <ol id="temps" class="hourly temps"></ol>
             <ol id="hours" class="hourly hours"></ol>
