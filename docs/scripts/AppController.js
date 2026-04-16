@@ -3,7 +3,7 @@ function AppController(options) {
 
   this.configStore = options.configStore;
   this.weatherService = options.weatherService;
-  this.forecastDataStore = options.forecastDataStore;
+  this.weatherDataStore = options.weatherDataStore;
   this.forecastRenderer = options.forecastRenderer;
   this.conditionsRenderer = options.conditionsRenderer;
   this.emptyStateElement = options.emptyStateElement;
@@ -11,15 +11,21 @@ function AppController(options) {
 }
 
 AppController.prototype.start = function() {
-  this._bindForecastUpdates();
+  this._bindWeatherUpdates();
   this._renderSetupState();
   this._loadWeather();
 };
 
-AppController.prototype._bindForecastUpdates = function() {
+AppController.prototype._bindWeatherUpdates = function() {
   var self = this;
 
-  this.forecastDataStore.onUpdate(function(data) {
+  this.weatherDataStore.onUpdate(function(data) {
+    self.conditionsRenderer.render(data);
+
+    if (!data.hours) {
+      return;
+    }
+
     self.forecastRenderer.render(new Forecast(data));
   });
 };
@@ -35,13 +41,13 @@ AppController.prototype._loadWeather = function() {
 
   this.weatherService.load({
     onConditionsLoaded: function(conditionsData) {
-      self.conditionsRenderer.render(conditionsData);
+      self.weatherDataStore.addCurrentData(conditionsData);
     },
     onHourlyLoaded: function(hourlyData) {
-      self.forecastDataStore.addHourlyData(hourlyData);
+      self.weatherDataStore.addHourlyData(hourlyData);
     },
     onDailyLoaded: function(dailyData) {
-      self.forecastDataStore.addDailyData(dailyData);
+      self.weatherDataStore.addDailyData(dailyData);
     }
   }, storedConfig, shouldUseTestData);
 };

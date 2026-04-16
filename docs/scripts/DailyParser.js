@@ -5,14 +5,15 @@ function DailyParser(data) {
 DailyParser.prototype.parse = function() {
   var empty = {
     sunsets: {},
-    sunrises: {}
+    sunrises: {},
+    today: null
   };
 
   if (!this.data || !this.data.forecastDays) {
     return empty;
   }
 
-  return this.data.forecastDays.reduce(function(accumulator, forecastDay) {
+  return this.data.forecastDays.reduce(function(accumulator, forecastDay, index) {
     var sunEvents = forecastDay.sunEvents || {};
     var sunriseTime = sunEvents.sunriseTime;
     var sunsetTime = sunEvents.sunsetTime;
@@ -25,7 +26,42 @@ DailyParser.prototype.parse = function() {
       accumulator.sunsets[Hour.startOfHour(sunsetTime)] = sunsetTime;
     }
 
+    if (index === 0) {
+      accumulator.today = DailyParser._todaySummary(forecastDay);
+    }
+
     return accumulator;
   }, empty);
 };
 
+DailyParser._todaySummary = function(forecastDay) {
+  var daytimeForecast = forecastDay.daytimeForecast || {};
+  var nighttimeForecast = forecastDay.nighttimeForecast || {};
+  var weatherCondition = daytimeForecast.weatherCondition || {};
+  var description = weatherCondition.description || {};
+
+  return {
+    dateLabel: DailyParser._dateLabel(forecastDay.displayDate),
+    description: description.text || '',
+    iconBaseUri: weatherCondition.iconBaseUri || '',
+    dayWindSpeed: DailyParser._windSpeedValue(daytimeForecast),
+    nightWindSpeed: DailyParser._windSpeedValue(nighttimeForecast),
+    sunriseTime: forecastDay.sunEvents && forecastDay.sunEvents.sunriseTime,
+    sunsetTime: forecastDay.sunEvents && forecastDay.sunEvents.sunsetTime
+  };
+};
+
+DailyParser._dateLabel = function(displayDate) {
+  if (!displayDate) {
+    return '';
+  }
+
+  return displayDate.month + '/' + displayDate.day;
+};
+
+DailyParser._windSpeedValue = function(forecastPeriod) {
+  var wind = (forecastPeriod && forecastPeriod.wind) || {};
+  var speed = wind.speed || {};
+
+  return speed.value || 0;
+};

@@ -11,7 +11,6 @@ img {
   image-rendering: -webkit-optimize-contrast;
   image-rendering: crisp-edges;
   image-rendering: pixelated;
-  height: 20%;
 }
 
 .wrapper {
@@ -30,37 +29,139 @@ img {
   color: #f5f0e8;
 }
 
-.setup-actions {
-  padding: 12px 16px 0;
-}
-
-.setup-actions a {
-  color: inherit;
-  display: inline-block;
-  font-family: 'Tanker-Regular';
-  font-size: 28px;
-  margin-right: 20px;
-  text-transform: uppercase;
-}
-
-.stats {
+.conditions {
+  margin: 24px 0 32px;
+  overflow: hidden;
   width: 100%;
 }
 
 .now,
 .today {
+  background: rgba(0, 0, 0, 0.06);
   float: left;
-  height: 550px;
-  width: 50%;
+  min-height: 360px;
+  padding: 24px 0;
+  width: 49%;
 }
 
-.clearfix {
-  clear: both;
+.dark .now,
+.dark .today {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.today {
+  float: right;
+}
+
+.now {
+  margin-right: 1%;
+}
+
+.conditions-label,
+.metric-label {
+  font-family: 'Chillax-Medium';
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.conditions-label {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.condition-hero {
+  margin-bottom: 28px;
+  overflow: hidden;
+}
+
+.condition-copy {
+  overflow: hidden;
+}
+
+.condition-icon {
+  float: left;
+  height: 140px;
+  margin-right: 20px;
+  width: 140px;
+}
+
+.today-icon {
+  height: 110px;
+  width: 110px;
 }
 
 .description {
-  font-size: 2em;
-  font-weight: 200;
+  font-family: 'Chillax-Medium';
+  font-size: 72px;
+  line-height: 0.9;
+}
+
+.today-description {
+  font-family: 'Chillax-Medium';
+  font-size: 48px;
+  line-height: 0.95;
+}
+
+.metric-grid {
+  overflow: hidden;
+}
+
+.today-metrics {
+  margin-bottom: 24px;
+}
+
+.metric {
+  border-top: 2px solid rgba(0, 0, 0, 0.12);
+  float: left;
+  padding-top: 14px;
+  width: 48%;
+}
+
+.metric + .metric {
+  float: right;
+}
+
+.dark .metric,
+.dark .sun-events {
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.metric-label {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.metric-value {
+  font-family: 'Tanker-Regular';
+  font-size: 64px;
+  line-height: 0.95;
+}
+
+.metric-value-small {
+  font-size: 42px;
+  line-height: 1;
+}
+
+.sun-events {
+  border-top: 2px solid rgba(0, 0, 0, 0.12);
+  padding-top: 18px;
+}
+
+.sun-event {
+  margin-bottom: 14px;
+  overflow: hidden;
+}
+
+.sun-event-time {
+  font-family: 'Tanker-Regular';
+  float: right;
+  font-size: 24px;
+  line-height: 32px;
+  text-align: right;
+}
+
+.forecast {
+  width: 100%;
 }
 
 .hourly {
@@ -84,9 +185,9 @@ img {
 
 .hours .hour {
   font-family: 'Tanker-Regular';
-  text-align: center;
   font-size: 42px;
   line-height: 65px;
+  text-align: center;
 }
 
 .hours .hour.empty {
@@ -120,11 +221,11 @@ img {
 .temp-high,
 .temp-low,
 .bar-container {
+  font-family: 'Tanker-Regular';
   left: 0;
   position: absolute;
   right: 0;
   text-align: center;
-  font-family: 'Tanker-Regular';
 }
 
 .bar-container {
@@ -135,8 +236,8 @@ img {
 .temp-low span {
   display: block;
   font-size: 60px;
-  line-height: 75px;
   left: -20px;
+  line-height: 75px;
   position: absolute;
   right: -20px;
   text-align: center;
@@ -173,8 +274,8 @@ img {
 }
 
 .temp-bar {
-  bottom: 0;
   background: -webkit-linear-gradient(90deg, #555 0%, #aaa 100%);
+  bottom: 0;
 }
 
 .temp-low {
@@ -229,9 +330,9 @@ img {
   left: 0;
   line-height: 44px;
   position: absolute;
+  text-align: center;
   top: 100%;
   width: 100%;
-  text-align: center;
 }
 
 .dark .precip-label {
@@ -239,8 +340,8 @@ img {
 }
 
 .over-50 .precip-label {
-  top: auto;
   bottom: 0;
+  top: auto;
 }
 
 .no-precip {
@@ -259,13 +360,40 @@ img {
     line-height: 24px;
   }
 
-  .setup-actions a {
-    font-size: 22px;
-    margin-bottom: 12px;
-  }
-
   .now,
   .today {
-    width: 100%;
+    float: none;
+    margin-bottom: 20px;
+    width: auto;
+  }
+
+  .condition-icon {
+    height: 108px;
+    width: 108px;
+  }
+
+  .today-icon {
+    height: 84px;
+    width: 84px;
+  }
+
+  .description {
+    font-size: 52px;
+  }
+
+  .today-description {
+    font-size: 38px;
+  }
+
+  .metric-value {
+    font-size: 48px;
+  }
+
+  .metric-value-small {
+    font-size: 34px;
+  }
+
+  .sun-event {
+    overflow: hidden;
   }
 }

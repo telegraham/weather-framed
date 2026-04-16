@@ -12,7 +12,7 @@
         <script type="text/javascript" src="scripts/Hour.js"></script>
         <script type="text/javascript" src="scripts/HourlyParser.js"></script>
         <script type="text/javascript" src="scripts/DailyParser.js"></script>
-        <script type="text/javascript" src="scripts/ForecastDataStore.js"></script>
+        <script type="text/javascript" src="scripts/WeatherDataStore.js"></script>
         <script type="text/javascript" src="scripts/TemperatureRange.js"></script>
         <script type="text/javascript" src="scripts/PrecipitationPeriod.js"></script>
         <script type="text/javascript" src="scripts/Forecast.js"></script>
@@ -26,20 +26,61 @@
     <body id="body">
         <div id="setup-banner" class="setup-banner"></div>
         <div class="wrapper">
-            <div class="stats">
+            <div class="conditions">
                 <div class="now">
-                    <h1 id="description" class="description">Sharknado</h1>
-                    <image id="icon" src="./images/sharknado.svg" />
+                    <div id="now-label" class="conditions-label"></div>
+                    <div class="condition-hero">
+                        <img id="icon" class="condition-icon" src="./images/sharknado.svg" alt="" />
+                        <div class="condition-copy">
+                            <h1 id="description" class="description">Sharknado</h1>
+                        </div>
+                    </div>
+                    <div class="metric-grid">
+                        <div class="metric">
+                            <div class="metric-label">Temp</div>
+                            <div id="current-temp" class="metric-value">--</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-label">RealFeel</div>
+                            <div id="real-feel" class="metric-value">--</div>
+                        </div>
+                    </div>
                 </div>
-                <div class="today"></div>
-                <div class="clearfix"></div>
+                <div class="today">
+                    <div id="today-label" class="conditions-label"></div>
+                    <div class="condition-hero">
+                        <img id="today-icon" class="condition-icon today-icon" src="./images/sharknado.svg" alt="" />
+                        <div class="condition-copy">
+                            <div id="today-description" class="today-description">Day forecast</div>
+                        </div>
+                    </div>
+                    <div class="metric-grid today-metrics">
+                        <div class="metric">
+                            <div class="metric-label">Day wind</div>
+                            <div id="day-wind" class="metric-value metric-value-small">--</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-label">Night wind</div>
+                            <div id="night-wind" class="metric-value metric-value-small">--</div>
+                        </div>
+                    </div>
+                    <div class="sun-events">
+                        <div class="sun-event">
+                            <div class="metric-label">Sunrise</div>
+                            <div id="sunrise-time" class="sun-event-time">--</div>
+                        </div>
+                        <div class="sun-event">
+                            <div class="metric-label">Sunset</div>
+                            <div id="sunset-time" class="sun-event-time">--</div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <ol id="temps" class="hourly temps"></ol>
-            <ol id="hours" class="hourly hours"></ol>
-            <ol id="precips" class="hourly precips"></ol>
-            <!-- <div>
-                
-            </div> -->
-        </div> 
+            <div class="forecast">
+                <ol id="temps" class="hourly temps"></ol>
+                <ol id="hours" class="hourly hours"></ol>
+                <ol id="precips" class="hourly precips"></ol>
+            </div>
+        </div>
     </body>
 </html>
