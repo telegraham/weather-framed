@@ -1,0 +1,80 @@
+body {
+  background: #111;
+  color: #f5f0e8;
+  font-family: 'Chillax-Light';
+  min-height: 100vh;
+}
+
+.reset-page {
+  padding: 24px 16px;
+}
+
+.reset-panel {
+  margin: 0 auto;
+  max-width: 720px;
+  width: 90%;
+}
+
+.reset-title {
+  font-family: 'Tanker-Regular';
+  font-size: 84px;
+  line-height: 80px;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+
+.reset-copy,
+.reset-status,
+.reset-nav {
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.reset-copy {
+  margin-bottom: 24px;
+}
+
+.reset-status {
+  margin-top: 20px;
+  min-height: 30px;
+}
+
+.reset-nav {
+  margin-top: 24px;
+}
+
+.reset-nav a,
+.reset-status a {
+  color: #f5f0e8;
+}
+
+.reset-button {
+  background: #f5f0e8;
+  border: 0;
+  color: #111;
+  cursor: pointer;
+  font-family: 'Tanker-Regular';
+  font-size: 42px;
+  margin-top: 12px;
+  padding: 18px 20px;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+@media (max-width: 800px) {
+  .reset-title {
+    font-size: 52px;
+    line-height: 50px;
+  }
+
+  .reset-copy,
+  .reset-status,
+  .reset-nav {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .reset-button {
+    font-size: 30px;
+  }
+}

@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Weather Config</title>
+        <link rel="stylesheet" href="styles/reset.css" />
+        <link rel="stylesheet" href="styles/hack.css" />
+        <link rel="stylesheet" href="styles/fonts.css" />
+        <link rel="stylesheet" href="styles/config.css" />
+        <script type="text/javascript" src="scripts/ConfigOverlay.js"></script>
+        <script type="text/javascript" src="scripts/ConfigStore.js"></script>
+        <script type="text/javascript" src="scripts/config.js"></script>
+    </head>
+    <body>
+        <div class="config-page">
+            <form id="config-form" class="config-panel">
+                <h1 class="config-title">Set up Weather</h1>
+                <p class="config-copy">Save your API key and coordinates for this device, then jump back to the forecast.</p>
+                <div class="config-field">
+                    <div class="config-label">API key</div>
+                    <input id="api-key" name="apiKey" type="text" />
+                </div>
+                <div class="config-field">
+                    <div class="config-label">Lat</div>
+                    <input id="latitude" name="lat" type="text" />
+                </div>
+                <div class="config-field">
+                    <div class="config-label">Long</div>
+                    <input id="longitude" name="lon" type="text" />
+                </div>
+                <div id="config-error" class="config-error"></div>
+                <input class="config-submit" type="submit" value="Save and view weather" />
+                <p class="config-nav"><a href="index.html">Back to forecast</a> · <a href="reset.html">Reset saved config</a></p>
+            </form>
+        </div>
+    </body>
+</html>
