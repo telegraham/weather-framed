@@ -5,14 +5,18 @@ function Forecast(data, windowSize) {
   var windowSize = typeof windowSize === "number" ? windowSize : Forecast.DEFAULT_WINDOW_SIZE;
 
   this._hours = rawHours.slice(0, windowSize).map(function(rawHour, index) {
+    var startOfHour = Hour.startOfHour(rawHour.startTime);
+
     return new Hour({
       hourId: rawHour.hourId,
       hourNumber: rawHour.hourNumber,
       isDaytime: rawHour.isDaytime,
-      startTime: rawHour.startTime,
       temperature: rawHour.temperature,
       precipitationLikelihood: rawHour.precipitationLikelihood,
-      sunStatuses: Hour.sunStatuses(rawHour, days),
+      sunStatuses: Hour.sunStatuses({
+        isDaytime: rawHour.isDaytime,
+        startOfHour: startOfHour
+      }, days),
       isFirst: index === 0
     });
   });

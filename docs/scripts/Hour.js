@@ -2,8 +2,6 @@ function Hour(config) {
   this.hourId = config.hourId;
   this.hourNumber = config.hourNumber;
   this.isDaytime = config.isDaytime;
-  this.startTime = Hour.startOfHour(config.startTime);
-  // this.endTime = config.endTime;
   this.temperature = config.temperature;
   this.precipitationLikelihood = config.precipitationLikelihood;
   this.sunStatuses = config.sunStatuses || [];
@@ -11,21 +9,20 @@ function Hour(config) {
 }
 
 Hour.sunStatuses = function(hour, days) {
-  if (!days) {
-    return hour.isDaytime ? ["DAY"] : ["NIGHT"];
-  }
-
+  var startOfHour = hour.startOfHour;
   var sunStatuses = []
 
-  if (days.sunsets[hour.startTime]) {
-    sunStatuses.push("SUNSET");
-  }
-  else if (days.sunrises[hour.startTime]) {
-    sunStatuses.push("SUNRISE");
+  if (days) {
+    if (days.sunsets[startOfHour]) {
+      sunStatuses.push("SUNSET");
+    }
+    else if (days.sunrises[startOfHour]) {
+      sunStatuses.push("SUNRISE");
+    }
   }
 
   sunStatuses.push(hour.isDaytime ? "DAY" : "NIGHT");
-  return sunStatuses
+  return sunStatuses;
 };
 Hour.startOfHour = function(dateTime) {
   var date = new Date(dateTime);
