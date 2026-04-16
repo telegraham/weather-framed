@@ -24,13 +24,38 @@ function isValidConfig(config) {
     isValidCoordinate(config.lon));
 }
 
-function getQueryConfig() {
-  var params = new URLSearchParams(window.location.search);
+function decodeQueryValue(value) {
+  return decodeURIComponent(String(value || '').replace(/\+/g, ' '));
+}
 
+function getQueryValue(name) {
+  var query = window.location.search;
+  var pairs;
+  var i;
+  var parts;
+
+  if (!query || query.length < 2) {
+    return null;
+  }
+
+  pairs = query.substring(1).split('&');
+
+  for (i = 0; i < pairs.length; i++) {
+    parts = pairs[i].split('=');
+
+    if (decodeQueryValue(parts[0]) === name) {
+      return decodeQueryValue(parts.slice(1).join('='));
+    }
+  }
+
+  return null;
+}
+
+function getQueryConfig() {
   return {
-    apiKey: params.get('apiKey') || params.get('key') || '',
-    lat: params.get('lat') || '',
-    lon: params.get('lon') || params.get('long') || ''
+    apiKey: getQueryValue('apiKey') || getQueryValue('key') || '',
+    lat: getQueryValue('lat') || '',
+    lon: getQueryValue('lon') || getQueryValue('long') || ''
   };
 }
 
