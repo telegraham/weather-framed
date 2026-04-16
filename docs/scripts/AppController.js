@@ -14,6 +14,41 @@ AppController.prototype.start = function() {
   this._bindWeatherUpdates();
   this._renderSetupState();
   this._loadWeather();
+
+  var self = this;
+
+  setTimeout(function(){
+    setInterval(function(){
+      self._loadWeather();
+    }, 5 * 60 * 1000) // 5min
+  }, AppController.msUntilFirstRefresh(new Date()));
+
+  setTimeout(function () {
+    window.location.reload();
+  }, AppController.msUntilTotalRefresh(new Date()));
+};
+
+AppController.msUntilFirstRefresh = function(now){ 
+  var currentMinute = now.getMinutes();
+  var nextMinute = currentMinute - (currentMinute % 5) + 6;
+  var next = new Date(now);
+
+  next.setMinutes(nextMinute, 0, 0);
+
+  return next.getTime() - now.getTime();
+}
+
+AppController.msUntilTotalRefresh = function(now) {
+  var currentMinute = now.getMinutes();
+  var next = new Date(now);
+
+  next.setMinutes(42, 0, 0);
+
+  if (currentMinute > 30) {
+    next.setHours(next.getHours() + 1);
+  }
+
+  return next.getTime() - now.getTime();
 };
 
 AppController.prototype._bindWeatherUpdates = function() {
