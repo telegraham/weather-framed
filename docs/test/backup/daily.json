@@ -1,0 +1,53 @@
+{
+  "forecastDays": [
+    {
+      "interval": {
+        "startTime": "2026-04-13T11:00:00Z",
+        "endTime": "2026-04-14T11:00:00Z"
+      },
+      "displayDate": {
+        "year": 2026,
+        "month": 4,
+        "day": 13
+      },
+      "sunEvents": {
+        "sunriseTime": "2026-04-13T10:17:00Z",
+        "sunsetTime": "2026-04-13T23:31:00Z"
+      },
+      "maxTemperature": {
+        "unit": "FAHRENHEIT",
+        "degrees": 179.7
+      },
+      "minTemperature": {
+        "unit": "FAHRENHEIT",
+        "degrees": 2.4
+      }
+    },
+    {
+      "interval": {
+        "startTime": "2026-04-14T11:00:00Z",
+        "endTime": "2026-04-15T11:00:00Z"
+      },
+      "displayDate": {
+        "year": 2026,
+        "month": 4,
+        "day": 14
+      },
+      "sunEvents": {
+        "sunriseTime": "2026-04-14T10:15:00Z",
+        "sunsetTime": "2026-04-14T23:32:00Z"
+      },
+      "maxTemperature": {
+        "unit": "FAHRENHEIT",
+        "degrees": 50
+      },
+      "minTemperature": {
+        "unit": "FAHRENHEIT",
+        "degrees": -158.5
+      }
+    }
+  ],
+  "timeZone": {
+    "id": "America/New_York"
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "currentTime": "2026-04-13T20:21:48.185198451Z",
+  "timeZone": {
+    "id": "America/New_York"
+  },
+  "isDaytime": true,
+  "weatherCondition": {
+    "iconBaseUri": "https://maps.gstatic.com/weather/v1/cloudy",
+    "description": {
+      "text": "Snow with possible thunder and lightning",
+      "languageCode": "en"
+    },
+    "type": "CLOUDY"
+  },
+  "temperature": {
+    "degrees": 77.2,
+    "unit": "FAHRENHEIT"
+  },
+  "feelsLikeTemperature": {
+    "degrees": 78.1,
+    "unit": "FAHRENHEIT"
+  },
+  "dewPoint": {
+    "degrees": 52.7,
+    "unit": "FAHRENHEIT"
+  },
+  "heatIndex": {
+    "degrees": 78.1,
+    "unit": "FAHRENHEIT"
+  },
+  "windChill": {
+    "degrees": 77.2,
+    "unit": "FAHRENHEIT"
+  },
+  "relativeHumidity": 42,
+  "uvIndex": 0,
+  "precipitation": {
+    "probability": {
+      "percent": 10,
+      "type": "RAIN"
+    },
+    "snowQpf": {
+      "quantity": 0,
+      "unit": "MILLIMETERS"
+    },
+    "qpf": {
+      "quantity": 0.08,
+      "unit": "MILLIMETERS"
+    }
+  },
+  "thunderstormProbability": 0,
+  "airPressure": {
+    "meanSeaLevelMillibars": 1014.13
+  },
+  "wind": {
+    "direction": {
+      "degrees": 230,
+      "cardinal": "SOUTHWEST"
+    },
+    "speed": {
+      "value": 26,
+      "unit": "KILOMETERS_PER_HOUR"
+    },
+    "gust": {
+      "value": 46,
+      "unit": "KILOMETERS_PER_HOUR"
+    }
+  },
+  "visibility": {
+    "distance": 16,
+    "unit": "KILOMETERS"
+  },
+  "cloudCover": 95,
+  "currentConditionsHistory": {
+    "temperatureChange": {
+      "degrees": 57.4,
+      "unit": "FAHRENHEIT"
+    },
+    "maxTemperature": {
+      "degrees": 76.8,
+      "unit": "FAHRENHEIT"
+    },
+    "minTemperature": {
+      "degrees": 46.6,
+      "unit": "FAHRENHEIT"
+    },
+    "snowQpf": {
+      "quantity": 0,
+      "unit": "MILLIMETERS"
+    },
+    "qpf": {
+      "quantity": 0.08,
+      "unit": "MILLIMETERS"
+    }
+  }
+}
