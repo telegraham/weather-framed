@@ -65,7 +65,7 @@ ForecastRenderer.prototype._renderTemp = function(hour){
 
   var tempHighDiv = document.createElement('div');
   tempHighDiv.className = "temp-high";
-  if (this.forecast.temperatureRange.isHigh(hour.temperature)) {
+  if (this.forecast.shouldLabelExtreme(hour) && this.forecast.temperatureRange.isHigh(hour.temperature)) {
     var tempHighSpan = document.createElement('span');
     tempHighSpan.innerText = Math.round(hour.temperature);
     tempHighDiv.appendChild(tempHighSpan);
@@ -90,7 +90,7 @@ ForecastRenderer.prototype._renderTemp = function(hour){
   var tempLowDiv = document.createElement('div');
   tempLowDiv.className = "temp-low";
   tempLowDiv.style.background = temperatureColor;
-  if (this.forecast.temperatureRange.isLow(hour.temperature)) {
+  if (this.forecast.shouldLabelExtreme(hour) && this.forecast.temperatureRange.isLow(hour.temperature)) {
     var tempLowSpan = document.createElement('span');
     tempLowSpan.innerText = Math.round(hour.temperature);
     tempLowDiv.appendChild(tempLowSpan);
