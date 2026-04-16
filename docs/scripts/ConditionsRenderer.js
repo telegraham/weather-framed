@@ -18,12 +18,13 @@ ConditionsRenderer.prototype.render = function(data) {
   var current = data.current || {};
   var today = data.days && data.days.today;
   var dark = !!current.dark;
+  var utcOffsetSeconds = this._getUtcOffsetSeconds(data.hours);
 
   this.bodyElement.className = dark ? 'dark' : '';
   this._setText(this.descriptionElement, current.description || 'Weather');
   this._setText(this.currentTemperatureElement, this._formatTemperature(current.temperature));
   this._setText(this.realFeelElement, this._formatTemperature(current.feelsLikeTemperature));
-  this._setText(this.nowLabelElement, this._formatLabelTime(current.currentTime));
+  this._setText(this.nowLabelElement, this._formatLabelTime(current.currentTime, utcOffsetSeconds));
   this._setIcon(this.iconElement, current.iconBaseUri, dark);
 
   if (!today) {
@@ -41,8 +42,8 @@ ConditionsRenderer.prototype.render = function(data) {
   this._setText(this.todayLabelElement, today.dateLabel || '');
   this._setText(this.dayWindElement, this._formatWind(today.dayWindSpeed));
   this._setText(this.nightWindElement, this._formatWind(today.nightWindSpeed));
-  this._setText(this.sunriseElement, this._formatTime(today.sunriseTime) || '--');
-  this._setText(this.sunsetElement, this._formatTime(today.sunsetTime) || '--');
+  this._setText(this.sunriseElement, this._formatTime(today.sunriseTime, utcOffsetSeconds) || '--');
+  this._setText(this.sunsetElement, this._formatTime(today.sunsetTime, utcOffsetSeconds) || '--');
   this._setIcon(this.todayIconElement, today.iconBaseUri, dark);
 };
 
@@ -83,12 +84,14 @@ ConditionsRenderer.prototype._formatWind = function(value) {
   return Math.round(value) + ' mph';
 };
 
-ConditionsRenderer.prototype._formatLabelTime = function(value) {
-  return this._formatTime(value) || '';
+ConditionsRenderer.prototype._formatLabelTime = function(value, utcOffsetSeconds) {
+  return this._formatTime(value, utcOffsetSeconds) || '';
 };
 
-ConditionsRenderer.prototype._formatTime = function(value) {
+ConditionsRenderer.prototype._formatTime = function(value, utcOffsetSeconds) {
   var date;
+  var utcTimeMs;
+  var adjustedDate;
 
   if (!value) {
     return '';
@@ -100,9 +103,36 @@ ConditionsRenderer.prototype._formatTime = function(value) {
     return '';
   }
 
-  return date.toLocaleTimeString([], {
-    hour: '2-digit',
-    hour12: false,
-    minute: '2-digit'
-  });
+  if (typeof utcOffsetSeconds !== 'number') {
+    return '';
+  }
+
+  utcTimeMs = date.getTime() + (date.getTimezoneOffset() * 60 * 1000);
+  adjustedDate = new Date(utcTimeMs + (utcOffsetSeconds * 1000));
+
+  return this._padNumber(adjustedDate.getUTCHours()) + ':' + this._padNumber(adjustedDate.getUTCMinutes());
+};
+
+ConditionsRenderer.prototype._getUtcOffsetSeconds = function(hours) {
+  var firstHour;
+
+  if (!hours || !hours.length) {
+    return null;
+  }
+
+  firstHour = hours[0];
+
+  if (typeof firstHour.utcOffsetSeconds !== 'number') {
+    return null;
+  }
+
+  return firstHour.utcOffsetSeconds;
+};
+
+ConditionsRenderer.prototype._padNumber = function(value) {
+  if (value < 10) {
+    return '0' + value;
+  }
+
+  return String(value);
 };
