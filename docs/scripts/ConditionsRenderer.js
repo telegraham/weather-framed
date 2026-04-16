@@ -112,7 +112,6 @@ ConditionsRenderer.prototype._formatLabelTime = function(value, utcOffsetSeconds
 
 ConditionsRenderer.prototype._formatTime = function(value, utcOffsetSeconds) {
   var date;
-  var utcTimeMs;
   var adjustedDate;
 
   if (!value) {
@@ -129,8 +128,7 @@ ConditionsRenderer.prototype._formatTime = function(value, utcOffsetSeconds) {
     return '';
   }
 
-  utcTimeMs = date.getTime() + (date.getTimezoneOffset() * 60 * 1000);
-  adjustedDate = new Date(utcTimeMs + (utcOffsetSeconds * 1000));
+  adjustedDate = new Date(date.getTime() + (utcOffsetSeconds * 1000));
 
   return this._padNumber(adjustedDate.getUTCHours()) + ':' + this._padNumber(adjustedDate.getUTCMinutes());
 };
