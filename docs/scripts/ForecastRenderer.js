@@ -65,9 +65,9 @@ ForecastRenderer.prototype._renderTemp = function(hour){
 
   var tempHighDiv = document.createElement('div');
   tempHighDiv.className = "temp-high";
-  if (this.forecast.shouldLabelExtreme(hour) && this.forecast.temperatureRange.isHigh(hour.temperature)) {
+  if (this.forecast.temperatureRange.isHigh(hour.temperature)) {
     var tempHighSpan = document.createElement('span');
-    tempHighSpan.innerText = Math.round(hour.temperature);
+    tempHighSpan.innerText = this.forecast.shouldLabelExtreme(hour) ? Math.round(hour.temperature) : '\u2022';
     tempHighDiv.appendChild(tempHighSpan);
   } else {
     tempHighDiv.className += " temp-empty";
@@ -90,9 +90,9 @@ ForecastRenderer.prototype._renderTemp = function(hour){
   var tempLowDiv = document.createElement('div');
   tempLowDiv.className = "temp-low";
   tempLowDiv.style.background = temperatureColor;
-  if (this.forecast.shouldLabelExtreme(hour) && this.forecast.temperatureRange.isLow(hour.temperature)) {
+  if (this.forecast.temperatureRange.isLow(hour.temperature)) {
     var tempLowSpan = document.createElement('span');
-    tempLowSpan.innerText = Math.round(hour.temperature);
+    tempLowSpan.innerText = this.forecast.shouldLabelExtreme(hour) ? Math.round(hour.temperature) : '\u2022';
     tempLowDiv.appendChild(tempLowSpan);
   } else {
     tempLowDiv.className += " temp-empty";
