@@ -110,6 +110,13 @@ img {
   margin-bottom: 24px;
 }
 
+.moon-phase-row {
+  border-top: 2px solid rgba(0, 0, 0, 0.12);
+  margin-bottom: 24px;
+  overflow: hidden;
+  padding-top: 14px;
+}
+
 .metric {
   border-top: 2px solid rgba(0, 0, 0, 0.12);
   float: left;
@@ -122,6 +129,7 @@ img {
 }
 
 .dark .metric,
+.dark .moon-phase-row,
 .dark .sun-events {
   border-color: rgba(255, 255, 255, 0.15);
 }
@@ -140,6 +148,12 @@ img {
 .metric-value-small {
   font-size: 42px;
   line-height: 1;
+}
+
+.moon-phase-value {
+  font-family: 'Noto Emoji', 'Chillax-Medium', sans-serif;
+  font-size: 28px;
+  line-height: 36px;
 }
 
 .sun-events {

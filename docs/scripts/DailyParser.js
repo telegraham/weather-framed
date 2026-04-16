@@ -46,6 +46,7 @@ DailyParser._todaySummary = function(forecastDay) {
     iconBaseUri: weatherCondition.iconBaseUri || '',
     dayWindSpeed: DailyParser._windSpeedValue(daytimeForecast),
     nightWindSpeed: DailyParser._windSpeedValue(nighttimeForecast),
+    moonPhase: forecastDay.moonEvents && forecastDay.moonEvents.moonPhase,
     sunriseTime: forecastDay.sunEvents && forecastDay.sunEvents.sunriseTime,
     sunsetTime: forecastDay.sunEvents && forecastDay.sunEvents.sunsetTime
   };

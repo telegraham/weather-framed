@@ -26,6 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
       todayIconElement: document.getElementById('today-icon'),
       dayWindElement: document.getElementById('day-wind'),
       nightWindElement: document.getElementById('night-wind'),
+      moonPhaseElement: document.getElementById('moon-phase'),
       sunriseElement: document.getElementById('sunrise-time'),
       sunsetElement: document.getElementById('sunset-time'),
       bodyElement: document.getElementById('body')

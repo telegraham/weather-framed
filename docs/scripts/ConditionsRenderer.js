@@ -10,6 +10,7 @@ function ConditionsRenderer(elements) {
   this.todayIconElement = elements.todayIconElement;
   this.dayWindElement = elements.dayWindElement;
   this.nightWindElement = elements.nightWindElement;
+  this.moonPhaseElement = elements.moonPhaseElement;
   this.sunriseElement = elements.sunriseElement;
   this.sunsetElement = elements.sunsetElement;
 }
@@ -32,6 +33,7 @@ ConditionsRenderer.prototype.render = function(data) {
     this._setText(this.todayLabelElement, '');
     this._setText(this.dayWindElement, '--');
     this._setText(this.nightWindElement, '--');
+    this._setText(this.moonPhaseElement, '--');
     this._setText(this.sunriseElement, '--');
     this._setText(this.sunsetElement, '--');
     this._setIcon(this.todayIconElement, '', dark);
@@ -42,6 +44,7 @@ ConditionsRenderer.prototype.render = function(data) {
   this._setText(this.todayLabelElement, today.dateLabel || '');
   this._setText(this.dayWindElement, this._formatWind(today.dayWindSpeed));
   this._setText(this.nightWindElement, this._formatWind(today.nightWindSpeed));
+  this._setText(this.moonPhaseElement, this._formatMoonPhase(today.moonPhase));
   this._setText(this.sunriseElement, this._formatTime(today.sunriseTime, utcOffsetSeconds) || '--');
   this._setText(this.sunsetElement, this._formatTime(today.sunsetTime, utcOffsetSeconds) || '--');
   this._setIcon(this.todayIconElement, today.iconBaseUri, dark);
@@ -82,6 +85,25 @@ ConditionsRenderer.prototype._formatWind = function(value) {
   }
 
   return Math.round(value) + ' mph';
+};
+
+ConditionsRenderer.prototype._formatMoonPhase = function(value) {
+  var symbol = ConditionsRenderer.MOON_PHASE_SYMBOLS[value];
+  var label = ConditionsRenderer._titleCaseMoonPhase(value);
+
+  if (!symbol && !label) {
+    return '--';
+  }
+
+  if (!symbol) {
+    return label;
+  }
+
+  if (!label) {
+    return symbol;
+  }
+
+  return symbol + ' ' + label;
 };
 
 ConditionsRenderer.prototype._formatLabelTime = function(value, utcOffsetSeconds) {
@@ -135,4 +157,25 @@ ConditionsRenderer.prototype._padNumber = function(value) {
   }
 
   return String(value);
+};
+
+ConditionsRenderer._titleCaseMoonPhase = function(value) {
+  if (!value) {
+    return '';
+  }
+
+  return String(value).toLowerCase().split('_').map(function(word) {
+    return word.charAt(0).toUpperCase() + word.substring(1);
+  }).join(' ');
+};
+
+ConditionsRenderer.MOON_PHASE_SYMBOLS = {
+  NEW_MOON: '🌑',
+  WAXING_CRESCENT: '🌒',
+  FIRST_QUARTER: '🌓',
+  WAXING_GIBBOUS: '🌔',
+  FULL_MOON: '🌕',
+  WANING_GIBBOUS: '🌖',
+  LAST_QUARTER: '🌗',
+  WANING_CRESCENT: '🌘'
 };
