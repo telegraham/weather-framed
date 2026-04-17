@@ -80,16 +80,16 @@ ForecastRenderer.prototype._renderTemp = function(hour){
 
   var barDiv = document.createElement('div');
   barDiv.className = "bar temp-bar";
-  var heightPercent = this.forecast.temperatureRange.percentFor(hour.temperature);
-  var temperatureColor = this._temperatureColorForPercent(heightPercent);
+  var barHeightPercent = this.forecast.temperatureRange.percentFor(hour.temperature);
+  var fillHeightPercent = this._temperatureFillHeightPercent(barHeightPercent);
+  var temperatureColor = this._temperatureColorForPercent(barHeightPercent);
 
-  barDiv.style.height = heightPercent + "%";
+  barDiv.style.height = fillHeightPercent + "%";
   barDiv.style.background = temperatureColor;
   barContainerDiv.appendChild(barDiv);
 
   var tempLowDiv = document.createElement('div');
   tempLowDiv.className = "temp-low";
-  tempLowDiv.style.background = temperatureColor;
   if (this.forecast.temperatureRange.isLow(hour.temperature)) {
     var tempLowSpan = document.createElement('span');
     tempLowSpan.innerText = this.forecast.shouldLabelExtreme(hour) ? Math.round(hour.temperature) : '\u2022';
@@ -97,8 +97,13 @@ ForecastRenderer.prototype._renderTemp = function(hour){
   } else {
     tempLowDiv.className += " temp-empty";
   }
-  tempLi.appendChild(tempLowDiv);
+  barContainerDiv.appendChild(tempLowDiv);
 }
+ForecastRenderer.prototype._temperatureFillHeightPercent = function(barHeightPercent) {
+  var lowLabelBandPercent = 100 / 3;
+
+  return lowLabelBandPercent + ((barHeightPercent * 2) / 3);
+};
 ForecastRenderer.prototype._temperatureColorForPercent = function(percent) {
   var lowChannel = 0x22;
   var highChannel = 0xdd;
