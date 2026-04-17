@@ -15,6 +15,27 @@ ConditionsParser.prototype.parse = function() {
     conditionType: weatherCondition.type || '',
     temperature: temperature.degrees,
     feelsLikeTemperature: feelsLikeTemperature.degrees,
+    windSpeed: ConditionsParser._windSpeedValue(this.data.wind),
+    relativeHumidity: this.data.relativeHumidity,
+    uvIndex: this.data.uvIndex,
+    visibilityMiles: ConditionsParser._visibilityValue(this.data.visibility),
+    cloudCover: this.data.cloudCover,
     currentTime: this.data.currentTime || null
   };
+};
+
+ConditionsParser._windSpeedValue = function(wind) {
+  var speed = (wind || {}).speed || {};
+
+  return speed.value;
+};
+
+ConditionsParser._visibilityValue = function(visibility) {
+  var distance = (visibility || {}).distance;
+
+  if (typeof distance !== 'number') {
+    return null;
+  }
+
+  return distance;
 };

@@ -6,7 +6,11 @@ DailyParser.prototype.parse = function() {
   var empty = {
     sunsets: {},
     sunrises: {},
-    today: null
+    today: null,
+    nextMoon: {
+      fullMoonDateLabel: null,
+      newMoonDateLabel: null
+    }
   };
 
   if (!this.data || !this.data.forecastDays) {
@@ -30,6 +34,10 @@ DailyParser.prototype.parse = function() {
       accumulator.today = DailyParser._todaySummary(forecastDay);
     }
 
+    if (index > 0) {
+      DailyParser._recordNextMoon(accumulator.nextMoon, forecastDay);
+    }
+
     return accumulator;
   }, empty);
 };
@@ -37,27 +45,47 @@ DailyParser.prototype.parse = function() {
 DailyParser._todaySummary = function(forecastDay) {
   var daytimeForecast = forecastDay.daytimeForecast || {};
   var nighttimeForecast = forecastDay.nighttimeForecast || {};
-  var weatherCondition = daytimeForecast.weatherCondition || {};
-  var description = weatherCondition.description || {};
+  var dayWeatherCondition = daytimeForecast.weatherCondition || {};
+  var nightWeatherCondition = nighttimeForecast.weatherCondition || {};
+  var dayDescription = dayWeatherCondition.description || {};
+  var nightDescription = nightWeatherCondition.description || {};
+  var moonEvents = forecastDay.moonEvents || {};
+  var moonriseTimes = moonEvents.moonriseTimes || [];
+  var moonsetTimes = moonEvents.moonsetTimes || [];
 
   return {
     dateLabel: DailyParser._dateLabel(forecastDay.displayDate),
-    description: description.text || '',
-    conditionType: weatherCondition.type || '',
+    description: dayDescription.text || '',
+    conditionType: dayWeatherCondition.type || '',
     dayWindSpeed: DailyParser._windSpeedValue(daytimeForecast),
+    dayHumidity: DailyParser._numberValue(daytimeForecast.relativeHumidity),
+    dayUvIndex: DailyParser._numberValue(daytimeForecast.uvIndex),
+    nightDescription: nightDescription.text || '',
+    nightConditionType: nightWeatherCondition.type || '',
     nightWindSpeed: DailyParser._windSpeedValue(nighttimeForecast),
-    moonPhase: forecastDay.moonEvents && forecastDay.moonEvents.moonPhase,
+    nightHumidity: DailyParser._numberValue(nighttimeForecast.relativeHumidity),
+    moonPhase: moonEvents.moonPhase,
     sunriseTime: forecastDay.sunEvents && forecastDay.sunEvents.sunriseTime,
-    sunsetTime: forecastDay.sunEvents && forecastDay.sunEvents.sunsetTime
+    sunsetTime: forecastDay.sunEvents && forecastDay.sunEvents.sunsetTime,
+    moonriseTime: moonriseTimes[0] || null,
+    moonsetTime: moonsetTimes[0] || null
   };
 };
 
 DailyParser._dateLabel = function(displayDate) {
+  var monthName;
+
   if (!displayDate) {
     return '';
   }
 
-  return displayDate.month + '/' + displayDate.day;
+  monthName = DailyParser.MONTH_NAMES[displayDate.month - 1];
+
+  if (!monthName) {
+    return displayDate.month + '-' + displayDate.day;
+  }
+
+  return monthName + ' ' + displayDate.day;
 };
 
 DailyParser._windSpeedValue = function(forecastPeriod) {
@@ -66,3 +94,53 @@ DailyParser._windSpeedValue = function(forecastPeriod) {
 
   return speed.value || 0;
 };
+
+DailyParser._numberValue = function(value) {
+  if (typeof value !== 'number') {
+    return null;
+  }
+
+  return value;
+};
+
+DailyParser._recordNextMoon = function(nextMoon, forecastDay) {
+  var moonPhase = forecastDay.moonEvents && forecastDay.moonEvents.moonPhase;
+  var dateLabel;
+
+  if (!nextMoon || (moonPhase !== 'FULL_MOON' && moonPhase !== 'NEW_MOON')) {
+    return;
+  }
+
+  dateLabel = DailyParser._dashDisplayLabel(forecastDay.displayDate);
+
+  if (moonPhase === 'FULL_MOON' && !nextMoon.fullMoonDateLabel) {
+    nextMoon.fullMoonDateLabel = dateLabel;
+  }
+
+  if (moonPhase === 'NEW_MOON' && !nextMoon.newMoonDateLabel) {
+    nextMoon.newMoonDateLabel = dateLabel;
+  }
+};
+
+DailyParser._dashDisplayLabel = function(displayDate) {
+  if (!displayDate) {
+    return '';
+  }
+
+  return displayDate.month + '-' + displayDate.day;
+};
+
+DailyParser.MONTH_NAMES = [
+  'January',
+  'February',
+  'March',
+  'April',
+  'May',
+  'June',
+  'July',
+  'August',
+  'September',
+  'October',
+  'November',
+  'December'
+];

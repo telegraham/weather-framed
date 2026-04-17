@@ -140,8 +140,15 @@ ForecastRenderer.prototype._renderPrecip = function(hour){
 
   if (this.forecast.shouldRenderConditionMarker(hour)) {
     var conditionMarkerSpan = document.createElement('span');
-    conditionMarkerSpan.className = "condition-marker";
+    var shouldRenderInBar = this.forecast.shouldRenderConditionMarkerInBar(hour);
+
+    conditionMarkerSpan.className = "condition-marker" + (shouldRenderInBar ? " in-bar" : "");
     conditionMarkerSpan.textContent = this.forecast.conditionMarkerForHour(hour);
-    precipLi.appendChild(conditionMarkerSpan);
+
+    if (shouldRenderInBar) {
+      precipBarDiv.appendChild(conditionMarkerSpan);
+    } else {
+      precipLi.appendChild(conditionMarkerSpan);
+    }
   }
 }

@@ -119,9 +119,9 @@ Forecast.prototype._findConditionMarkerHoursById = function() {
     }
 
     anchorHour = currentSpan[0];
-    marker = ConditionEmoji.format(anchorHour.conditionType, anchorHour.isDaytime);
+    marker = ConditionEmoji.format(anchorHour.conditionType, anchorHour.isDaytime, 'boring');
 
-    if (anchorHour.precipitationLikelihood < Forecast.CONDITION_MARKER_PRECIP_THRESHOLD && marker !== previousMarker) {
+    if (marker !== previousMarker) {
       conditionMarkerHoursById[anchorHour.hourId] = true;
       previousMarker = marker;
     }
@@ -172,11 +172,21 @@ Forecast.prototype.shouldRenderConditionMarker = function(hour) {
 };
 
 Forecast.prototype.conditionMarkerForHour = function(hour) {
-  return ConditionEmoji.format(hour.conditionType, hour.isDaytime);
+  return ConditionEmoji.format(hour.conditionType, hour.isDaytime, 'boring');
+};
+
+Forecast.prototype.shouldRenderConditionMarkerInBar = function(hour) {
+  if (hour.precipitationLikelihood > Forecast.CONDITION_MARKER_FORCE_IN_BAR_PRECIP_THRESHOLD) {
+    return true;
+  }
+
+  return hour.precipitationLikelihood >= Forecast.CONDITION_MARKER_IN_BAR_PRECIP_THRESHOLD &&
+    ConditionEmoji.isPrecip(hour.conditionType);
 };
 
 Forecast.prototype._conditionGroupKey = function(hour) {
-  return ConditionEmoji.groupKey(hour.conditionType);
+  return ConditionEmoji.groupKey(hour.conditionType, 'boring');
 };
 
-Forecast.CONDITION_MARKER_PRECIP_THRESHOLD = 75;
+Forecast.CONDITION_MARKER_IN_BAR_PRECIP_THRESHOLD = 25;
+Forecast.CONDITION_MARKER_FORCE_IN_BAR_PRECIP_THRESHOLD = 75;

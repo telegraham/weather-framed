@@ -13,11 +13,11 @@
     "type": "MOSTLY_CLEAR"
   },
   "temperature": {
-    "degrees": 72.7,
+    "degrees": 172.7,
     "unit": "FAHRENHEIT"
   },
   "feelsLikeTemperature": {
-    "degrees": 76.5,
+    "degrees": 176.5,
     "unit": "FAHRENHEIT"
   },
   "dewPoint": {

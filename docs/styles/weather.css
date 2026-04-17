@@ -2,22 +2,21 @@ body {
   background: #999;
   font-family: 'Chillax-Light';
 }
-
-
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
 
 .wrapper {
-  background: inherit;
-  margin: 0 auto;
-  width: 1104px;
-  height: 1268;
   background: white;
   color: black;
+  margin: 0 auto;
+  width: 1104px;
+  height: 1268px;
+  overflow: hidden;
 }
 
-/*.conditions, .forecast {
-  padding: 0 16px;
-}
-*/
 .dark .wrapper {
   background: black;
   color: white;
@@ -38,157 +37,127 @@ body {
 .conditions {
   overflow: hidden;
 }
-
+.night-row-head {
+  margin-top: 32px;
+}
 .now,
 .today {
-  background: rgba(0, 0, 0, 0.06);
   float: left;
-  min-height: 360px;
-  padding: 24px 0;
-  width: 49%;
+  height: 520px;
+  width: 47.1%;
 }
-
-.dark .now,
-.dark .today {
-  background: rgba(255, 255, 255, 0.08);
+.now {
+  padding: 16px 8px 0px 16px;
 }
-
+.today {
+  padding: 16px 16px 0px 8px;
+}
 .today {
   float: right;
 }
-
-.now {
-  margin-right: 1%;
+.now-label,
+.today-label,
+.tonight-label {
+  display: block;
+  margin-bottom: 8px;
 }
-
-.conditions-label,
-.metric-label {
-  font-family: 'Chillax-Medium';
-  letter-spacing: 0.04em;
+.now-label,
+.today-label,
+.tonight-label {
   text-transform: uppercase;
+  font-size: 36px;
 }
-
-.conditions-label {
-  font-size: 30px;
-  margin-bottom: 20px;
+.now .condition-emoji,
+.today .condition-emoji {
+  float: right;
 }
-
-.condition-hero {
-  margin-bottom: 28px;
-  overflow: hidden;
-}
-
-.condition-copy {
-  overflow: hidden;
+.condition-row {
+  font-family: 'Chillax-Regular';
+  font-size: 27px;
+  margin-bottom: 16px;
 }
 
 .condition-emoji {
   font-family: 'Noto Emoji', sans-serif;
-  font-size: 134px;
-  line-height: 134px;
   position: relative;
-}
 
-.shark {
-  left: 0;
-  position: absolute;
-  top: 0;
-}
-.description {
-  font-family: 'Chillax-Medium';
-  font-size: 72px;
-  line-height: 0.9;
-}
-
-.today-description {
-  font-family: 'Chillax-Medium';
-  font-size: 48px;
-  line-height: 0.95;
-}
-
-.metric-grid {
+  font-size: 148px;
+  max-width: 169px;
+  max-height: 190px;
   overflow: hidden;
-}
+  text-align: center;
+  line-height: 155px;
 
-.today-metrics {
-  margin-bottom: 24px;
+  font-weight: 300;
 }
-
-.moon-phase-row {
-  border-top: 2px solid rgba(0, 0, 0, 0.12);
-  margin-bottom: 24px;
-  overflow: hidden;
-  padding-top: 14px;
+.today-emoji, .tonight-emoji {
+  font-size: 92px;
+  max-width: 121px;
+  max-height: 92px;
+  line-height: 92px;
 }
-
-.metric {
-  border-top: 2px solid rgba(0, 0, 0, 0.12);
-  float: left;
-  padding-top: 14px;
-  width: 48%;
+.numeric-value {
+  font-family: 'Tanker-Regular';
 }
-
-.metric + .metric {
-  float: right;
-}
-
-.dark .metric,
-.dark .moon-phase-row,
-.dark .sun-events {
-  border-color: rgba(255, 255, 255, 0.15);
-}
-
-.metric-label {
-  font-size: 18px;
-  margin-bottom: 8px;
-}
-
 .emoji-label {
   font-family: 'Noto Emoji', sans-serif;
-  float: left;
-  font-size: 30px;
-  line-height: 32px;
-  margin-bottom: 0;
+  display: inline-block;
+
+  font-size: 50px;
+  max-width: 62px;
+  overflow: hidden;
+  text-align: center;
+  line-height: 52px;
+
+  font-weight: 500;
+}
+.inline-stat, .feels-like {
+  font-size: 48px;
+}
+.description,
+.today-description {
+  font-family: 'Chillax-Medium';
 }
 
-.metric-value {
-  font-family: 'Tanker-Regular';
-  font-size: 64px;
-  line-height: 0.95;
+.description,
+.today-description {
+  font-size: 52px;
 }
 
-.metric-value-small {
-  font-size: 42px;
-  line-height: 1;
-}
 
+.temp-wrapper {
+  font-size: 111px;
+  /*font-family: 'Tanker-Regular';*/
+  font-family: 'Chillax-Medium';
+  line-height: 81px;
+}
+.feels-like {
+  /*text-transform: uppercase;
+  width: 140px;*/
+  width: 106px;
+  margin: 0 16px;
+  display: inline-block;
+}
 .moon-phase-value {
   font-family: 'Noto Emoji', 'Chillax-Medium', sans-serif;
   font-size: 28px;
   line-height: 36px;
 }
 
-.sun-events {
+.section-rule {
+  border: 0;
   border-top: 2px solid rgba(0, 0, 0, 0.12);
-  padding-top: 18px;
+  margin: 16px 0;
 }
 
-.sun-event {
-  margin-bottom: 14px;
-  overflow: hidden;
+.dark .section-rule {
+  border-color: rgba(255, 255, 255, 0.15);
 }
 
-.sun-event-time {
-  font-family: 'Tanker-Regular';
-  float: left;
-  font-size: 24px;
-  line-height: 32px;
-  margin-left: 12px;
-  text-align: left;
-}
 .hourly {
   width: 100%;
 }
+
 .temps,
 .precips {
   height: 320px;
@@ -205,7 +174,7 @@ body {
 }
 
 .hours .hour {
-  font-family: 'Tanker-Regular';
+  font-family: 'Chillax-Regular';
   font-size: 42px;
   line-height: 65px;
   text-align: center;
@@ -322,13 +291,22 @@ body {
 .condition-marker {
   bottom: 0;
   font-family: 'Noto Emoji', sans-serif;
-  font-size: 64px;
+  font-size: 55px;
   left: 0;
-  line-height: 72px;
+  line-height: 60px;
   position: absolute;
   text-align: center;
   width: 100%;
   z-index: 1;
+  font-weight: 400;
+}
+
+.condition-marker.in-bar {
+  bottom: auto;
+  color: white;
+  line-height: 80px;
+  top: 0;
+  font-weight: 700;
 }
 
 .day .precip-bar {
@@ -337,14 +315,6 @@ body {
 
 .night .precip-bar {
   background: #222;
-}
-
-.night .over-50 .precip-label {
-  color: white;
-}
-
-.dark .day .over-50 .precip-label {
-  color: black;
 }
 
 .sunrise .precip-bar,
@@ -371,43 +341,5 @@ body {
 .over-50 .precip-label {
   bottom: 0;
   top: auto;
-}
-
-@media (max-width: 800px) {
-  .setup-banner {
-    font-size: 18px;
-    line-height: 24px;
-  }
-
-  .now,
-  .today {
-    float: none;
-    margin-bottom: 20px;
-    width: auto;
-  }
-
-  .description {
-    font-size: 52px;
-  }
-
-  .today-description {
-    font-size: 38px;
-  }
-
-  .metric-value {
-    font-size: 48px;
-  }
-
-  .metric-value-small {
-    font-size: 34px;
-  }
-
-  .sun-event {
-    overflow: hidden;
-  }
-
-  .condition-marker {
-    font-size: 24px;
-    line-height: 28px;
-  }
+  color: white;
 }

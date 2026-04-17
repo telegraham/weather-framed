@@ -68,11 +68,6 @@ AppController.prototype._bindWeatherUpdates = function() {
 AppController.prototype._loadWeather = function() {
   var self = this;
   var storedConfig = this.configStore.getStoredConfig();
-  var shouldUseTestData = !storedConfig && this.useTestData;
-
-  if (!storedConfig && !shouldUseTestData) {
-    return;
-  }
 
   this.weatherService.load({
     onConditionsLoaded: function(conditionsData) {
@@ -84,7 +79,7 @@ AppController.prototype._loadWeather = function() {
     onDailyLoaded: function(dailyData) {
       self.weatherDataStore.addDailyData(dailyData);
     }
-  }, storedConfig, shouldUseTestData);
+  }, storedConfig, this.useTestData);
 };
 
 AppController.prototype._renderSetupState = function() {

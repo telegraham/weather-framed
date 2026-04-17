@@ -32,57 +32,59 @@
         <div class="wrapper">
             <div class="conditions">
                 <div class="now">
-                    <div id="now-label" class="conditions-label"></div>
-                    <div class="condition-hero">
-                        <div class="condition-copy">
-                            <div id="condition-emoji" class="condition-emoji" aria-hidden="true">
-                                <span class="tornado">🌪️</span>
-                                <span class="shark">🦈</span>
-                            </div>
-                            <h1 id="description" class="description">Sharknado</h1>
-                        </div>
+                    <div class="condition-row condition-row-head clearfix">
+                        <span id="condition-emoji" class="text-emoji condition-emoji">
+                            <span class="tornado">🌪️</span>
+                            <span class="shark">🦈</span>
+                        </span>
+                        <span id="now-label" class="now-label"></span>
+                        <span id="description" class="description">Sharknado</span>
                     </div>
-                    <div class="metric-grid">
-                        <div class="metric">
-                            <div class="metric-label">Temp</div>
-                            <div id="current-temp" class="metric-value">--</div>
-                        </div>
-                        <div class="metric">
-                            <div class="metric-label">RealFeel</div>
-                            <div id="real-feel" class="metric-value">--</div>
-                        </div>
+                    <div class="condition-row">
+                        <span class="temp-wrapper"><span id="current-temp" class="temp-value numeric-value">--</span>&deg;</span>
+                        <span class="feels-like"> feels like </span>
+                        <span class="temp-wrapper"><span id="real-feel" class="temp-value numeric-value">--</span>&deg;</span>
+                    </div>
+                    <div class="condition-row">
+                        <span class="inline-stat"><span class="emoji-label">🌬️</span> <span id="current-wind" class="numeric-value">--</span> mph</span>
+                        <span class="inline-stat"><span class="emoji-label">💧</span> <span id="current-humidity" class="numeric-value">--</span>%</span>
+                        <span class="inline-stat"><span class="emoji-label">🦞</span> <span id="current-uv" class="numeric-value">--</span></span>
+                    </div>
+                    <div class="condition-row">
+                        <span class="inline-stat"><span class="emoji-label">🔭</span> <span id="current-visibility" class="numeric-value">--</span> mi</span>
+                        <span class="inline-stat"><span class="emoji-label">🌫️</span> <span id="current-cloud-cover" class="numeric-value">--</span>%</span>
+                    </div>
+                    <div class="condition-row">
+                        <span class="inline-stat"><span class="emoji-label">🌅</span> <span id="sunrise-time" class="numeric-value">--</span></span>
+                        <span class="inline-stat"><span class="emoji-label">🌇</span> <span id="sunset-time" class="numeric-value">--</span></span>
                     </div>
                 </div>
                 <div class="today">
-                    <div id="today-label" class="conditions-label"></div>
-                    <div class="condition-hero">
-                        <div class="condition-copy">
-                            <div id="today-emoji" class="condition-emoji"></div>
-                            <div id="today-description" class="today-description">Day forecast</div>
-                        </div>
+                    <div class="condition-row condition-row-head clearfix">
+                        <span id="today-emoji" class="text-emoji condition-emoji today-emoji" ></span>
+                        <span id="today-label" class="today-label"></span>
+                        <span id="today-description" class="today-description">Day forecast</span>
                     </div>
-                    <div class="metric-grid today-metrics">
-                        <div class="metric">
-                            <div class="metric-label">Day wind</div>
-                            <div id="day-wind" class="metric-value metric-value-small">--</div>
-                        </div>
-                        <div class="metric">
-                            <div class="metric-label">Night wind</div>
-                            <div id="night-wind" class="metric-value metric-value-small">--</div>
-                        </div>
+                    <div class="condition-row">
+                        <span class="inline-stat"><span class="emoji-label">🌬️</span> <span id="day-wind" class="numeric-value">--</span> mph</span>
+                        <span class="inline-stat"><span class="emoji-label">💧</span> <span id="day-humidity" class="numeric-value">--</span>%</span>
+                        <span class="inline-stat"><span class="emoji-label">🦞</span> <span id="day-uv" class="numeric-value">--</span></span>
                     </div>
-                    <div class="moon-phase-row">
-                        <div id="moon-phase" class="moon-phase-value">--</div>
+                    <div class="condition-row condition-row-head night-row-head clearfix">
+                        <span id="tonight-emoji" class="text-emoji condition-emoji tonight-emoji"></span>
+                        <span class="tonight-label">tonight</span>
+                        <span id="tonight-description" class="today-description">Night forecast</span>
                     </div>
-                    <div class="sun-events">
-                        <div class="sun-event">
-                            <div class="metric-label emoji-label">🌅</div>
-                            <div id="sunrise-time" class="sun-event-time">--</div>
-                        </div>
-                        <div class="sun-event">
-                            <div class="metric-label emoji-label">🌇</div>
-                            <div id="sunset-time" class="sun-event-time">--</div>
-                        </div>
+                    <div class="condition-row">
+                        <span class="inline-stat"><span class="emoji-label">🌬️</span> <span id="night-wind" class="numeric-value">--</span> mph</span>
+                        <span class="inline-stat"><span class="emoji-label">💧</span> <span id="night-humidity" class="numeric-value">--</span>%</span>
+                    </div>
+                    <div class="condition-row">
+                        <span id="moon-phase" class="moon-phase-value">--</span><span id="next-moon-bullet" style="display: none;"> • </span><span id="next-moon"></span>
+                    </div>
+                    <div class="condition-row">
+                        <span class="inline-stat"><span class="emoji-label">↗️</span> <span id="moonrise-time" class="numeric-value">--</span></span>
+                        <span class="inline-stat"><span class="emoji-label">↘️</span> <span id="moonset-time" class="numeric-value">--</span></span>
                     </div>
                 </div>
             </div>
