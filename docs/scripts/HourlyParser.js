@@ -4,6 +4,8 @@ function HourlyParser(data) {
 
 HourlyParser.prototype.parse = function() {
   var hours = this.data.forecastHours.map(function(forecastHour) {
+    var weatherCondition = forecastHour.weatherCondition || {};
+
     return {
       hourId: forecastHour.interval.startTime,
       hourNumber: forecastHour.displayDateTime.hours,
@@ -11,6 +13,7 @@ HourlyParser.prototype.parse = function() {
       startTime: forecastHour.interval.startTime,
       utcOffsetSeconds: HourlyParser._utcOffsetSeconds(forecastHour.displayDateTime.utcOffset),
       // endTime: forecastHour.interval.endTime,
+      conditionType: weatherCondition.type || '',
       temperature: forecastHour.temperature.degrees,
       precipitationLikelihood: forecastHour.precipitation.probability.percent
     };

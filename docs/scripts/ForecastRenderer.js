@@ -19,11 +19,6 @@ ForecastRenderer.prototype.render = function(forecast) {
       this._renderTemp(hour);
     }, this);
 
-    if (!this.forecast.hasPrecipitation()) {
-      this._renderNoPrecipitation();
-      return;
-    }
-
     hours.forEach(function(hour) {
       this._renderPrecip(hour);
     }, this);
@@ -126,12 +121,6 @@ ForecastRenderer.prototype._temperatureColorForPercent = function(percent) {
 
   return "#" + hexChannel + hexChannel + hexChannel;
 };
-ForecastRenderer.prototype._renderNoPrecipitation = function(){
-  var noPrecipitationLi = document.createElement('li');
-  noPrecipitationLi.className = "no-precip";
-  noPrecipitationLi.innerText = "no precip";
-  this.precipsElement.appendChild(noPrecipitationLi);
-}
 ForecastRenderer.prototype._renderPrecip = function(hour){
   var precipLi = document.createElement('li');
   precipLi.className = "hour precip-hour " + hour.sunStatuses.map(this._classNameForHourSunStatus, this).join(" ");
@@ -147,5 +136,12 @@ ForecastRenderer.prototype._renderPrecip = function(hour){
     precipLabelSpan.className = "precip-label";
     precipLabelSpan.innerText = hour.precipitationLikelihood + "%";
     precipBarDiv.appendChild(precipLabelSpan);
+  }
+
+  if (this.forecast.shouldRenderConditionMarker(hour)) {
+    var conditionMarkerSpan = document.createElement('span');
+    conditionMarkerSpan.className = "condition-marker";
+    conditionMarkerSpan.textContent = this.forecast.conditionMarkerForHour(hour);
+    precipLi.appendChild(conditionMarkerSpan);
   }
 }

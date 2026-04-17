@@ -12,7 +12,6 @@ ConditionsParser.prototype.parse = function() {
     dark: !this.data.isDaytime,
     isDaytime: !!this.data.isDaytime,
     description: description.text || '',
-    iconBaseUri: weatherCondition.iconBaseUri || '',
     conditionType: weatherCondition.type || '',
     temperature: temperature.degrees,
     feelsLikeTemperature: feelsLikeTemperature.degrees,

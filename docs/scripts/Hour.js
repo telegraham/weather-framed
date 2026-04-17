@@ -2,6 +2,7 @@ function Hour(config) {
   this.hourId = config.hourId;
   this.hourNumber = config.hourNumber;
   this.isDaytime = config.isDaytime;
+  this.conditionType = config.conditionType || '';
   this.temperature = config.temperature;
   this.precipitationLikelihood = config.precipitationLikelihood;
   this.sunStatuses = config.sunStatuses || [];

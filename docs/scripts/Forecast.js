@@ -11,6 +11,7 @@ function Forecast(data, windowSize) {
       hourId: rawHour.hourId,
       hourNumber: rawHour.hourNumber,
       isDaytime: rawHour.isDaytime,
+      conditionType: rawHour.conditionType,
       temperature: rawHour.temperature,
       precipitationLikelihood: rawHour.precipitationLikelihood,
       sunStatuses: Hour.sunStatuses({
@@ -29,6 +30,7 @@ function Forecast(data, windowSize) {
 
   this.precipitationPeriods = this._findPrecipitationPeriods();
   this._labeledPrecipitationHoursById = this._findLabeledPrecipitationHoursById();
+  this._conditionMarkerHoursById = this._findConditionMarkerHoursById();
 }
 
 Forecast.prototype.hours = function() {
@@ -100,6 +102,51 @@ Forecast.prototype._findLabeledPrecipitationHoursById = function() {
   }, {});
 };
 
+Forecast.prototype._findConditionMarkerHoursById = function() {
+  var conditionMarkerHoursById = {};
+  var currentSpan = [];
+  var i;
+  var hour;
+  var previousHour;
+  var previousMarker = null;
+
+  function commitSpan() {
+    var anchorHour;
+    var marker;
+
+    if (!currentSpan.length) {
+      return;
+    }
+
+    anchorHour = currentSpan[0];
+    marker = ConditionEmoji.format(anchorHour.conditionType, anchorHour.isDaytime);
+
+    if (anchorHour.precipitationLikelihood < Forecast.CONDITION_MARKER_PRECIP_THRESHOLD && marker !== previousMarker) {
+      conditionMarkerHoursById[anchorHour.hourId] = true;
+      previousMarker = marker;
+    }
+
+    currentSpan = [];
+  }
+
+  for (i = 0; i < this._hours.length; i++) {
+    hour = this._hours[i];
+    previousHour = currentSpan[currentSpan.length - 1];
+
+    if (!previousHour || this._conditionGroupKey(previousHour) === this._conditionGroupKey(hour)) {
+      currentSpan.push(hour);
+      continue;
+    }
+
+    commitSpan();
+    currentSpan.push(hour);
+  }
+
+  commitSpan();
+
+  return conditionMarkerHoursById;
+};
+
 Forecast.prototype.hasPrecipitation = function() {
   return this.precipitationPeriods.length > 0;
 };
@@ -119,3 +166,17 @@ Forecast.prototype.shouldLabelHour = function(hour) {
 Forecast.prototype.shouldLabelExtreme = function(hour) {
   return !!this._labeledExtremeHourIds[hour.hourId];
 };
+
+Forecast.prototype.shouldRenderConditionMarker = function(hour) {
+  return !!this._conditionMarkerHoursById[hour.hourId];
+};
+
+Forecast.prototype.conditionMarkerForHour = function(hour) {
+  return ConditionEmoji.format(hour.conditionType, hour.isDaytime);
+};
+
+Forecast.prototype._conditionGroupKey = function(hour) {
+  return ConditionEmoji.groupKey(hour.conditionType);
+};
+
+Forecast.CONDITION_MARKER_PRECIP_THRESHOLD = 75;

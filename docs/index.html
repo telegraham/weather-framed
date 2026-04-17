@@ -18,6 +18,7 @@
         <script type="text/javascript" src="scripts/WeatherDataStore.js"></script>
         <script type="text/javascript" src="scripts/TemperatureRange.js"></script>
         <script type="text/javascript" src="scripts/PrecipitationPeriod.js"></script>
+        <script type="text/javascript" src="scripts/ConditionEmoji.js"></script>
         <script type="text/javascript" src="scripts/Forecast.js"></script>
         <script type="text/javascript" src="scripts/ConditionsRenderer.js"></script>
         <script type="text/javascript" src="scripts/ForecastRenderer.js"></script>
@@ -33,9 +34,11 @@
                 <div class="now">
                     <div id="now-label" class="conditions-label"></div>
                     <div class="condition-hero">
-                        <img id="icon" class="condition-icon" src="./images/sharknado.svg" alt="" />
                         <div class="condition-copy">
-                            <div id="condition-emoji" class="condition-emoji"></div>
+                            <div id="condition-emoji" class="condition-emoji" aria-hidden="true">
+                                <span class="tornado">🌪️</span>
+                                <span class="shark">🦈</span>
+                            </div>
                             <h1 id="description" class="description">Sharknado</h1>
                         </div>
                     </div>
@@ -53,7 +56,6 @@
                 <div class="today">
                     <div id="today-label" class="conditions-label"></div>
                     <div class="condition-hero">
-                        <img id="today-icon" class="condition-icon today-icon" src="./images/sharknado.svg" alt="" />
                         <div class="condition-copy">
                             <div id="today-emoji" class="condition-emoji"></div>
                             <div id="today-description" class="today-description">Day forecast</div>
