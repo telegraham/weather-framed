@@ -1,11 +1,9 @@
 body {
+  background: #999;
   font-family: 'Chillax-Light';
 }
 
-body.dark {
-  background: black;
-  color: white;
-}
+
 
 img {
   image-rendering: -webkit-optimize-contrast;
@@ -14,7 +12,21 @@ img {
 }
 
 .wrapper {
+  background: inherit;
+  margin: 0 auto;
+  width: 1104px;
+  height: 1268;
+  background: white;
+  color: black;
+}
+
+/*.conditions, .forecast {
   padding: 0 16px;
+}
+*/
+.dark .wrapper {
+  background: black;
+  color: white;
 }
 
 .setup-banner {
@@ -30,9 +42,7 @@ img {
 }
 
 .conditions {
-  margin: 24px 0 32px;
   overflow: hidden;
-  width: 100%;
 }
 
 .now,
@@ -188,15 +198,9 @@ img {
   margin-left: 12px;
   text-align: left;
 }
-
-.forecast {
-  width: 100%;
-}
-
 .hourly {
   width: 100%;
 }
-
 .temps,
 .precips {
   height: 320px;
