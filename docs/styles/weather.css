@@ -294,9 +294,6 @@ img {
 
 .bar {
   background: #555;
-}
-
-.bar {
   left: 0;
   position: absolute;
   right: 0;
