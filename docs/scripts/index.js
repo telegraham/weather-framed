@@ -1,5 +1,5 @@
 var debug = false;
-var useTestData = true;
+var useTestData = false;
 
 var configStore = new ConfigStore({
   windowObject: window
