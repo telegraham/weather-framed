@@ -44,6 +44,7 @@ DailyParser._todaySummary = function(forecastDay) {
     dateLabel: DailyParser._dateLabel(forecastDay.displayDate),
     description: description.text || '',
     iconBaseUri: weatherCondition.iconBaseUri || '',
+    conditionType: weatherCondition.type || '',
     dayWindSpeed: DailyParser._windSpeedValue(daytimeForecast),
     nightWindSpeed: DailyParser._windSpeedValue(nighttimeForecast),
     moonPhase: forecastDay.moonEvents && forecastDay.moonEvents.moonPhase,

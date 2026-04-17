@@ -10,8 +10,10 @@ ConditionsParser.prototype.parse = function() {
 
   return {
     dark: !this.data.isDaytime,
+    isDaytime: !!this.data.isDaytime,
     description: description.text || '',
     iconBaseUri: weatherCondition.iconBaseUri || '',
+    conditionType: weatherCondition.type || '',
     temperature: temperature.degrees,
     feelsLikeTemperature: feelsLikeTemperature.degrees,
     currentTime: this.data.currentTime || null

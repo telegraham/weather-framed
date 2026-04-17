@@ -17,11 +17,13 @@ document.addEventListener('DOMContentLoaded', function() {
     }),
     conditionsRenderer: new ConditionsRenderer({
       nowLabelElement: document.getElementById('now-label'),
+      conditionEmojiElement: document.getElementById('condition-emoji'),
       descriptionElement: document.getElementById('description'),
       iconElement: document.getElementById('icon'),
       currentTemperatureElement: document.getElementById('current-temp'),
       realFeelElement: document.getElementById('real-feel'),
       todayLabelElement: document.getElementById('today-label'),
+      todayEmojiElement: document.getElementById('today-emoji'),
       todayDescriptionElement: document.getElementById('today-description'),
       todayIconElement: document.getElementById('today-icon'),
       dayWindElement: document.getElementById('day-wind'),
